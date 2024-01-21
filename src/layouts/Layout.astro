@@ -1,0 +1,72 @@
+---
+// Advanced example! Not recommended for most users.
+// import rawStylesCSS from '../assets/css/main.css?raw';
+
+import macrosCSS from '../assets/css/abstracts/_macros.css?raw';
+import themeTokensCSS from '../assets/css/theme-Tokens.css?raw';
+import designTokensCSS from '../assets/css/abstracts/_design-tokens.css?raw';
+import resetsCSS from '../assets/css/base/_resets.css?raw';
+import utilitiesCSS from '../assets/css/abstracts/_utilities.css?raw';
+import typographyCSS from '../assets/css/base/_typography.css?raw';
+
+import pageDefaultsCSS from '../assets/css/layouts/_page-defaults.css?raw';
+import layoutNopaddingCSS from '../assets/css/layouts/_layout-nopadding.css?raw';
+import containersDndCSS from '../assets/css/layouts/_containers-dnd.css?raw';
+
+import headerCSS from '../assets/css/components/_header.css?raw';
+import footerCSS from '../assets/css/components/_footer.css?raw';
+import buttonsCSS from '../assets/css/components/_buttons.css?raw';
+import formsCSS from '../assets/css/components/_forms.css?raw';
+
+import modulesCSS from '../assets/css/components/_modules.css?raw';
+
+import mainCSS from '../assets/css/main.css?raw';
+/* @import url('./modules/_modules.css'); */
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width' />
+    <script
+      src='https://unpkg.com/htmx.org@1.9.10'
+      integrity='sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC'
+      crossorigin='anonymous'></script>
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+
+    <!-- <style is:inline set:html={macrosCSS}></style>
+    <style is:inline set:html={themeTokensCSS}></style>
+    <style is:inline set:html={designTokensCSS}></style>
+    <style is:inline set:html={resetsCSS}></style>
+    <style is:inline set:html={utilitiesCSS}></style>
+    <style is:inline set:html={typographyCSS}></style>
+
+    <style is:inline set:html={pageDefaultsCSS}></style>
+    <style is:inline set:html={layoutNopaddingCSS}></style>
+    <style is:inline set:html={containersDndCSS}></style>
+
+    <style is:inline set:html={headerCSS}></style>
+    <style is:inline set:html={footerCSS}></style>
+    <style is:inline set:html={buttonsCSS}></style>
+    <style is:inline set:html={formsCSS}></style>
+
+    <style is:inline set:html={modulesCSS}></style> -->
+
+    <!-- <style is:inline set:html={mainCSS}></style> -->
+
+    <link rel='stylesheet' href='/src/assets/css/main.css' />
+    <meta name='generator' content={Astro.generator} />
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

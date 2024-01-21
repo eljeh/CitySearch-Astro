@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroImageBanner from '../components/HeroImageBanner.astro';
+import JewelBar from '../components/JewelBar.astro';
+import PromoBar from '../components/PromoBar.astro';
+import CitySearchLayout from '../components/CitySearchLayout.astro';
+---
+
+<style is:inline></style>
+
+<Layout title=''>
+  <main id='main-content' class='body-container-wrapper'>
+    <div class='CitySearch-page'>
+      <section>
+        <!--  heroImageBanner  -->
+        <HeroImageBanner />
+      </section>
+
+      <section>
+        <!--  jewelbar  -->
+        <JewelBar />
+      </section>
+
+      <section>
+        <!--  promoBar  -->
+        <PromoBar />
+      </section>
+
+      <!--  citySearchLayout  -->
+      <CitySearchLayout />
+    </div>
+  </main>
+</Layout>

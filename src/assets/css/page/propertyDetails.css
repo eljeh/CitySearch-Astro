@@ -1,0 +1,130 @@
+/* @import url('http://example.com/example_style.css'); */
+
+/***********************************************/
+/* CSS @imports must be at the top of the file */
+/* Add them above this section                 */
+/***********************************************/
+
+/*****************************************/
+/* Start your style declarations here    */
+/*****************************************/
+.detail-page{
+  margin-bottom: 2em;
+}
+.property-row{
+  display: flex;
+  justify-content: center;
+  max-width: 1280px;
+  margin: auto;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+.property-col{
+  display: flex;
+  flex-direction: column;
+  flex: 100%;
+}
+@media (min-width: 1024px) {
+  .property-col{
+    flex: 1 0 calc(70%-1em);
+  }
+}
+
+.contactInfo{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.property-side-col{
+  flex: 0 0 calc(30%-1em)
+}
+
+.property-side-col>div{
+  position: sticky;
+  top: 148px;
+}
+
+.shareAndSave{
+  display: flex;
+  font-size: 0.75em;
+  font-weight: 700;
+  font-family: var(--ff-heading);
+  text-transform: uppercase!important;
+  justify-content: space-around;
+  gap: 1em;
+}
+
+.reviews .dftSpf{
+  background-color: transparent;
+}
+
+.shareThis{
+  color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;  
+}
+.addtoFavourites svg{
+  fill: red;
+  width: 2em;
+}
+.addtoFavourites{
+  color: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  cursor: pointer;
+  position: relative;
+  transition: scale 0.125s ease-out;
+}
+
+
+svg.share-node {
+  width: 2em;
+  fill: #2f2f2f;
+}
+svg.heart-notsaved {
+  display: inline;
+}
+
+.addtoFavourites svg.heart-notsaved{
+  display: inline;
+}
+
+.addtoFavourites svg.heart-saved{
+  position: absolute;
+  left: 0;
+  scale: 0;
+  transition: scale 0.125s ease-out;
+}
+
+.addtoFavourites:hover svg.heart-notsaved{
+  /*display: none!important; */
+}
+.addtoFavourites:hover svg.heart-saved{
+  /*display: inline!important;*/
+  scale: 1;
+}
+.addToFavs-toggle:checked ~ svg.heart-saved{
+  scale: 1;
+}
+.addtoFavourites:hover {
+  scale: 1;
+}
+
+.addtoFavourites:active svg.heart-saved{
+  scale: 1.25;
+ }
+
+.addToFavs-toggle{
+    position: absolute;
+    opacity: 0;
+}
+
+.reviews .injected-svg{
+  display: none;
+}

@@ -1,0 +1,259 @@
+/* @import url('http://example.com/example_style.css'); */
+
+/***********************************************/
+/* CSS @imports must be at the top of the file */
+/* Add them above this section                 */
+/***********************************************/
+
+/*****************************************/
+/* Start your style declarations here    */
+/*****************************************/
+
+/* Base */
+
+
+
+.hs-form-field {
+  position: relative;
+  margin-bottom: 1.4rem;
+}
+
+/* Form Title */
+
+
+.form-title ~ div > form {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: none;
+}
+
+/* Labels */
+
+/* Help Text - Legends */
+
+.hs-form-field legend {
+  color: #FFFFFF;
+  font-size: 0.875rem;
+}
+
+/* Inputs */
+
+.input {
+  position: relative;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=tel],
+input[type=number],
+input[type=file],
+select,
+textarea {
+  appearance: none;
+  background-color: var(--clr-input-bg);
+  border-top: var(--input-border-top);
+  border-bottom: var(--input-border-bottom);
+  border-left: var(--input-border-left);
+  border-right: var(--input-border-right);
+  border-radius: var(--input-border-rd);
+  color: var(--clr-input-val);
+  display: inline-block;
+  padding: 0.75em;
+  width: 100%;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+fieldset {
+  max-width: 100% !important;
+  background-color: var(--clr-form-bg);
+  border-top: var(--form-border-top);
+  border-bottom: var(--form-border-bottom);
+  border-left: var(--form-border-left);
+  border-right: var(--form-border-right);
+  border-radius: var(--form-border-rd);
+  color: var(--clr-form-ft);
+}
+
+::placeholder {
+  color: var(--clr-input-pl);
+}
+
+/* Inputs - Checkbox/Radio */
+
+form .inputs-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+form .inputs-list:not(.no-list) label {
+  color: var(--clr-label-ft);
+}
+
+.inputs-list > li {
+  display: block;
+  margin: 0.7em 0 0.7em 0.7em;
+  padding: 0;
+  width: 100%;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  border: none;
+  cursor: pointer;
+  height: auto;
+  line-height: normal;
+  margin-right: 0.35rem;
+  padding: 0;
+  width: auto;
+}
+
+
+input[type=date],
+input[type=time] {
+    appearance: none;
+    background-color: var(--clr-input-bg);
+    border-top: var(--input-border-top);
+    border-bottom: var(--input-border-bottom);
+    border-left: var(--input-border-left);
+    border-right: var(--input-border-right);
+    border-radius: var(--input-border-rd);
+    color: var(--clr-input-val);
+    display: inline-block;
+    padding: 0.75rem;
+    width: 100% !important;
+}
+
+
+
+/* Inputs - Select */
+.has-custom-select{
+  position: relative;
+}
+.has-custom-select:after{
+  -webkit-mask-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>');
+  mask-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  background: var(--clr-primary);
+  content: " ";
+  height: 22px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 22px; 
+}
+.custom-select{
+  cursor: pointer;
+}
+
+
+
+.hs-fieldtype-select .input:after {
+  content: '\25BE';
+  pointer-events: none;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Inputs - Datepicker */
+
+.hs-fieldtype-date .input .hs-dateinput:before {
+  color: #1E2B33;
+  content:'\01F4C5';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fn-date-picker .pika-table thead th {
+  color: #00326D;
+}
+
+.fn-date-picker td.is-today .pika-button {
+  color: #00326D;
+}
+
+.fn-date-picker td.is-selected .pika-button {
+  background: #fff9e3;
+  border-radius: 0;
+  box-shadow: none;
+  color: #00326D;
+}
+
+.fn-date-picker td .pika-button:hover {
+  background-color: #00C6AB !important;
+  border-radius: 0 !important;
+}
+
+/* Headings and Text */
+
+form .hs-richtext p,
+form .hs-richtext h1,
+form .hs-richtext h2,
+form .hs-richtext h3,
+form .hs-richtext h4,
+form .hs-richtext h5,
+form .hs-richtext h6 {
+  color: #FFF;
+}
+
+form .hs-richtext img {
+  max-width: 100% !important;
+}
+
+form .header {
+  background-color: transparent;
+  border: none;
+}
+
+/* GDPR */
+
+.legal-consent-container .hs-form-booleancheckbox-display > span,
+.legal-consent-container .hs-form-booleancheckbox-display > span p {
+  font-size: 0.875rem;
+  line-height: 1.25;
+}
+
+/* Validation */
+
+.hs-input.invalid.error {
+  border-color: #ef6b51;
+}
+
+.hs-error-msg,
+.hs-error-msgs {
+  color: #ef6b51;
+  margin-top: 0.35rem;
+}
+
+/* Submit */
+
+
+form input[type=submit]:active,
+form .hs-button:active {
+  background-color: #50eed3;
+  border-color: #50eed3;
+}
+/* Captcha */
+
+.grecaptcha-badge {
+  margin: 0 auto;
+}
+
+/* Inline Thank You Message */
+
+.submitted-message {
+  background-color: #f6f8f9;
+  border-color: transparent;  
+  padding: 2.8rem;
+}

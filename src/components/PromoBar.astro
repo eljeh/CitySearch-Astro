@@ -1,0 +1,40 @@
+<div class='promoBar'>
+  <div class='promoItem'>
+    <h2>promo.title</h2>
+    <span class='divider'>|</span>
+    <a href='promo.button_url' class='btn'>promo.button_text</a>
+  </div>
+</div>
+
+<style>
+  .promoBar {
+    background-color: #000;
+    color: #fff;
+    padding-bottom: 1.5em;
+    padding-top: 1.5em;
+  }
+
+  .promoBar:empty {
+    display: none;
+  }
+
+  .promoItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    font-size: 0.75em;
+  }
+
+  .promoBar .divider {
+    margin-right: -1em;
+    font-size: 1.5em;
+    font-weight: 900;
+    line-height: 0.75;
+  }
+
+  .promoBar .btn {
+    color: #fff;
+    font-size: 1.25em;
+  }
+</style>

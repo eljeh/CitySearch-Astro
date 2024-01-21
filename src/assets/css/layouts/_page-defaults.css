@@ -1,0 +1,25 @@
+/* @import url('http://example.com/example_style.css'); */
+
+/***********************************************/
+/* CSS @imports must be at the top of the file */
+/* Add them above this section                 */
+/***********************************************/
+
+/*****************************************/
+/* Start your style declarations here    */
+/*****************************************/
+
+body{
+  margin: 0 var(--page-pd);
+}
+
+main{
+  min-height: 80vh;
+}
+body>.container-fluid,
+main>.container-fluid:not(.CitySearch-page),
+main>section>.container-fluid,
+footer{
+  margin-left: calc(var(--page-pd) * -1);
+  margin-right: calc(var(--page-pd) * -1);
+}

@@ -1,0 +1,14 @@
+/*****************************************/
+/*          Macro declarations           */
+/*****************************************/
+
+/* {% macro emConvert(base, value)  %}
+  calc({{value}}/{{base}})em
+{% endmacro %}
+
+
+{% macro fluid_font(min, max)  %}
+  clamp({{ min }}px, calc(1vw + 8.30189px), {{max}}px)
+{% endmacro %} */
+
+
