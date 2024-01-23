@@ -82,10 +82,10 @@ main{
 .map{
 	grid-area: map;
 
-	/* background-image: url(https://images.unsplash.com/photo-1580715911453-d6d9cffd5771?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=807&q=80);
+	background-image: url(https://fglvoice.ca/wp-content/uploads/2013/08/100-King-St-W-Google-Maps-1249x800.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; */
+  background-position: center;
 
   height: calc(100vh - var(--header-h));
   position: sticky;
@@ -264,23 +264,4 @@ div#map {
     "map map list"
     "map map list";
 }
-.filter{
-	background: rgba(128, 200, 255, 0.529);
-	grid-area: filter;
-}
-.map{
-	background:rgba(214, 255, 132, 0.48);
-	grid-area: map;
-	background-image: url(https://images.unsplash.com/photo-1580715911453-d6d9cffd5771?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=807&q=80);
-}
-.map.fullscreen{
-	grid-column: 1 / 5;
-  grid-row: 1 / 4;
-  z-index: -1; /* added to fix the map not showing up */
-}
-
-.results{
-	background:rgba(254, 110, 26, 0.51);
-	grid-area: list;
-} 
 

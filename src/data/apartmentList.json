@@ -1,0 +1,59 @@
+{
+	"apartments": [
+		{
+			"id": 1,
+			"name": "Cozy Corner Apartments",
+			"address": "123 Main Street, Cityville",
+			"rent": "$1,200",
+			"bedrooms": 2,
+			"bathrooms": 1,
+			"featured": true,
+			"amenities": [
+				"Swimming Pool",
+				"Gym",
+				"Parking"
+			],
+			"images": [
+				"image1.jpg",
+				"image2.jpg",
+				"image3.jpg"
+			]
+		},
+		{
+			"id": 2,
+			"name": "Urban Oasis Apartments",
+			"location": "456 Downtown Avenue, Metropolis",
+			"price": "$1,800 per month",
+			"bedrooms": 3,
+			"bathrooms": 2,
+			"amenities": [
+				"Balcony",
+				"Pet Friendly",
+				"Security"
+			],
+			"images": [
+				"image4.jpg",
+				"image5.jpg",
+				"image6.jpg"
+			]
+		},
+		{
+			"id": 3,
+			"name": "Skyline Heights Residences",
+			"location": "789 Highrise Boulevard, Skyline City",
+			"price": "$2,500 per month",
+			"bedrooms": 1,
+			"bathrooms": 1,
+			"amenities": [
+				"Roof Deck",
+				"Concierge Service",
+				"Smart Home Features"
+			],
+			"images": [
+				"image7.jpg",
+				"image8.jpg",
+				"image9.jpg"
+			]
+		}
+	]
+}

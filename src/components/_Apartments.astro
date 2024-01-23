@@ -1,0 +1,30 @@
+<ul id='apartmentsList' class='list'></ul>
+
+<script is:inline>
+  // Fetch data from JSON file
+  fetch('../data/apartmentList.json')
+    .then((response) => response.json())
+    .then((data) => {
+      // Get the parent element to append the list items
+      const apartmentsList = document.getElementById('apartmentsList');
+
+      // Iterate through each apartment in the array
+      data.apartments.forEach((apartment) => {
+        console.log('each');
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+          <div class='card'>
+            <div>${apartment.id}</div>
+            <div>${apartment.name}</div>
+            <div>${apartment.address}</div>
+            <div>${apartment.rent}</div>
+            <div>${apartment.bedrooms}</div>
+            <div>${apartment.bathrooms}</div>
+            <div>${apartment.featured}</div>
+          </div>
+        `;
+        // Append the list item to the parent element
+        apartmentsList.appendChild(listItem);
+      });
+    });
+</script>
