@@ -1,0 +1,22 @@
+---
+const { apartment } = Astro.props;
+---
+
+<div class='card-content-thumb'>
+  <h3 class='card-title'>
+    <span>${apartment.lowest_rent}</span><small
+      ><span>and</span><span>up</span></small
+    >
+  </h3>
+
+  <div class='card-details'>
+    {apartment.address}
+    <div class='name'>{apartment.name}</div>
+  </div>
+
+  <button
+    class='btn-look-a-like'
+    hx-on=`click: htmx.toggleClass('#PropertyCard-${apartment.id}', 'open')`
+    >Learn More
+  </button>
+</div>

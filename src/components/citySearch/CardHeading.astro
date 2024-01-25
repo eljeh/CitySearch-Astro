@@ -1,0 +1,32 @@
+---
+const { apartment } = Astro.props;
+---
+
+<div class='contact-heading'>
+  <div class='content-details'>
+    <h3 class='info-title'>
+      <span>${apartment.lowest_rent}</span><small
+        ><span>and</span><span>up</span></small
+      >
+    </h3>
+    {apartment.address}
+    <div class='details-name'>{apartment.name}</div>
+  </div>
+
+  <div class='content-contact'>
+    <button class='contact-share'>
+      <span>Share This</span>
+      <i class='fas fa-share-alt fa-2x'></i>
+    </button>
+
+    <button class='contact-tel'>
+      <span>Tel: 123-123-1234</span>
+      <i class='fas fa-phone fa-2x'></i>
+    </button>
+
+    <button class='contact-email'>
+      <span>Email Us</span>
+      <i class='fas fa-envelope fa-2x'></i>
+    </button>
+  </div>
+</div>

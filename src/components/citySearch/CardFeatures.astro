@@ -1,0 +1,14 @@
+---
+const { apartment } = Astro.props;
+---
+
+<div class='content-features'>
+  <h3 class='title'>Features</h3>
+  <ul>
+    {
+      apartment.amenities.map((amenity) => {
+        return <li>{amenity}</li>;
+      })
+    }
+  </ul>
+</div>

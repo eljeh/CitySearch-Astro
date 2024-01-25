@@ -1,0 +1,25 @@
+.filter {
+  position: fixed;
+  left: -540px;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 540px;
+  z-index: 3;
+}
+.filter.open {
+  left: 0;
+}
+.filter .panel {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 1.618em 0;
+  background: white;
+  padding: 0.25em;
+  box-shadow: 1px 1px 9px 0px #000 42;
+  border-radius: 0.25em;
+  border: 0.25em solid white;
+}
+.filter .panel heading {
+  font-size: 1.25em;
+  line-height: 1.618em;
+}

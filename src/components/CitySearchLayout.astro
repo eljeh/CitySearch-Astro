@@ -1,54 +1,17 @@
 ---
 import '../assets/css/page/citySearch.css';
-// import PropertyCard from '../components/PropertyCard.astro';
 import SearchResults from './SearchResults.astro';
 const page_layout = 'fml';
 ---
 
-<style is:inline>
-  .container {
-    --filter-size: minmax(max-content, 16vw);
-    --list-size: minmax(min-content, 25vw);
-    --map-size: 1fr;
-  }
-  .gm-style img {
-    max-width: 24em;
-  }
-
-  /* {% if module.full_screen_map %} */
-  .filter,
-  .results {
-    background: #dae1e980;
-    backdrop-filter: blur(3px);
-    box-shadow: 1px 1px 20px 1px #8f8f8f;
-  }
-  .filter {
-    padding: 1em;
-  }
-  .filter form {
-    padding: 1em;
-  }
-  section.heading {
-    background: var(--clr-form-bg);
-    border-radius: 0.25em;
-    color: var(--clr-form-ft);
-    margin-top: 0.5em;
-    padding: 1em 1.5em;
-  }
-  div#map {
-    padding: 0;
-  }
-  /* {% endif %} */
-</style>
-
 <div class='container fml'>
   <SearchResults />
 
-  <!-- <div class='filter'>
+  <div class='filter'>
     <form id='property-filter' action='href' method='GET'>
       <h2>Search</h2>
 
-      {# City #} 
+      <!-- {# City #}  -->
       <div class='form-group has-custom-select'>
         <label for='city'>City *</label>
         <select name='city' id='city' class='custom-select' required>
@@ -58,7 +21,7 @@ const page_layout = 'fml';
         </select>
       </div>
 
-       {# Neighbourhood #}
+      <!-- {# Neighbourhood #} -->
       <div class='form-group has-custom-select'>
         <label for='hood'>Neighbourhood</label>
         <select name='hood' id='hood' class='custom-select'>
@@ -71,7 +34,7 @@ const page_layout = 'fml';
 
       <script></script>
 
-      {# Property Name #}
+      <!-- {# Property Name #} -->
       <div class='form-control'>
         <label for='name'>Property Name</label>
         <input
@@ -83,7 +46,7 @@ const page_layout = 'fml';
         />
       </div>
 
-      {# Pricing #} 
+      <!-- {# Pricing #}  -->
       <div class='form-control custom-slider'>
         <label>Price:</label>
         <div class='slider-controls'>
@@ -93,7 +56,7 @@ const page_layout = 'fml';
         <input type='hidden' name='pMax' id='pMax' aria-label='Price Max' />
       </div>
 
-      {# Bedrooms #}
+      <!-- {# Bedrooms #} -->
       <div class='form-control has-custom-select'>
         <label for='bed'>Bedrooms</label>
         <select name='bed' id='bed' class='custom-select'>
@@ -101,7 +64,7 @@ const page_layout = 'fml';
         </select>
       </div>
 
-      {# Bathrooms #}
+      <!-- {# Bathrooms #} -->
       <div class='form-control has-custom-select'>
         <label for='bed'>Bathrooms</label>
         <select name='bath' id='bath' class='custom-select'>
@@ -112,7 +75,7 @@ const page_layout = 'fml';
         </select>
       </div>
 
-      {# Square footage #} 
+      <!-- {# Square footage #}  -->
       <div class='form-control custom-slider'>
         <label>SQFT:</label>
         <div class='slider-controls'>
@@ -122,7 +85,7 @@ const page_layout = 'fml';
         <input type='hidden' name='sMax' id='sMax' aria-label='sqft Max' />
       </div>
 
-      {# Housetype #} 
+      <!-- {# Housetype #}  -->
       <div class='form-group has-custom-select'>
         <label for='type'>Housing Type</label>
         <select name='type' id='type' class='custom-select'>
@@ -130,7 +93,7 @@ const page_layout = 'fml';
         </select>
       </div>
 
-     {# pet_friendly #} 
+      <!-- {# pet_friendly #}  -->
       <div class='form-group radio-buttons'>
         <legend>Pet Friendly</legend>
         <fieldset id='pets' class='form-check'>
@@ -172,7 +135,7 @@ const page_layout = 'fml';
         >
       </div>
     </form>
-  </div> -->
+  </div>
 
   <!-- {# ////// MAP  /////// #} -->
   <div class='map fullscreen'>

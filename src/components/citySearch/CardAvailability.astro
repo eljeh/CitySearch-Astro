@@ -1,0 +1,30 @@
+---
+const { apartment } = Astro.props;
+---
+
+<div class='content-availability'>
+  <h3 class='title'>Availability</h3>
+  <div class='table-availability'>
+    <div class='availability-row heading'>
+      <span class='type'>1 Bedroom</span>
+      <span class='rent'>Rent</span>
+      <span class='bath'>Bath</span>
+      <span class='sqft'>Sq ft</span>
+      <span class='availability'></span>
+    </div>
+
+    {
+      apartment.bedroomTypes.map((bedroom) => {
+        return (
+          <div class='availability-row premium'>
+            <span class='type'>{bedroom.type}</span>
+            <span class='rent'>{bedroom.rent}</span>
+            <span class='bath'>{bedroom.bath}</span>
+            <span class='sqft'>{bedroom.sqft}</span>
+            <span class='availability'>{bedroom.availability}</span>
+          </div>
+        );
+      })
+    }
+  </div>
+</div>

@@ -2,6 +2,32 @@
 /*      City Search declarations         */
 /*****************************************/
 
+.hide {
+  display: none !important;
+}
+* {
+  scroll-behavior: smooth;
+}
+header {
+  z-index: 4;
+}
+
+.light.filter, .light.list-wrapper, .light.results-panel {
+  background: #fff a6;
+  backdrop-filter: blur(2px);
+  box-shadow: 1px 1px 20px 1px #c7c7c7;
+}
+.dark.filter, .dark.list-wrapper, .dark.results-panel {
+  background: #333538 6b;
+  backdrop-filter: blur(2px);
+  box-shadow: 1px 1px 20px 1px black;
+}
+.shadow.filter, .shadow.list-wrapper, .shadow.results-panel {
+  background: #b4b4b4 6b;
+  backdrop-filter: blur(2px);
+  box-shadow: 1px 1px 20px 1px #8f8f8f;
+}
+
 main{    
   margin: 0 calc(var(--page-pd)*-1);
 }   
@@ -30,10 +56,15 @@ main{
   font-size: 1.2em;
 }
 
-
+.gm-style img {
+  max-width: 24em;
+}
 
 .container{
 	display: grid;
+  --filter-size: minmax(max-content, 16vw);
+  --list-size: minmax(min-content, 51.5rem);
+  --map-size: 1fr;
 }
 .container.fml{
 	grid-template-columns: 25vw 1fr 25vw;
@@ -70,6 +101,8 @@ main{
     "map map list"
     "map map list";
 }
+
+
 .filter{
 	grid-area: filter;
   z-index: 1;
@@ -115,6 +148,8 @@ main{
   width: 100%;
   justify-content: center;
 }
+
+/* property-filter  */
 
 form#property-filter{
   display: flex;
@@ -189,6 +224,7 @@ form#property-filter>h2{
   padding: 0.125em 0.25em;
 }
 
+
 .form-control {
     position: relative;
 }
@@ -246,6 +282,11 @@ form#property-filter>h2{
 .filter{
   padding: 1em 1.5em;
 }
+
+
+
+/* Map */
+
 div#map {
     padding: 1em 0;
 }
@@ -253,7 +294,6 @@ div#map {
 div#map {
     height: 100%;
 }
-
 
 
 .container.f-ml{
@@ -265,3 +305,26 @@ div#map {
     "map map list";
 }
 
+
+.filter,
+.results {
+  background: #dae1e980;
+  backdrop-filter: blur(3px);
+  box-shadow: 1px 1px 20px 1px #8f8f8f;
+}
+.filter {
+  padding: 1em;
+}
+.filter form {
+  padding: 1em;
+}
+section.heading {
+  background: var(--clr-form-bg);
+  border-radius: 0.25em;
+  color: var(--clr-form-ft);
+  margin-top: 0.5em;
+  padding: 1em 1.5em;
+}
+div#map {
+  padding: 0;
+}

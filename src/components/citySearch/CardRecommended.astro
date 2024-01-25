@@ -1,0 +1,12 @@
+---
+import data from '../../data/new.json';
+import PropertyThumbnail from './PropertyThumbnail.astro';
+---
+
+<div class='recommended hide1'>
+  <h3 class='title'>You may also like....</h3>
+  <div class='list'>
+    <PropertyThumbnail apartment={data.apartments[5]} />
+    <PropertyThumbnail apartment={data.apartments[14]} />
+  </div>
+</div>

@@ -1,0 +1,50 @@
+---
+import '../../assets/css/components/citySearch/PropertyCard.css';
+import CardThumb from './CardThumb.astro';
+
+import CardCarousel from './CardCarousel.astro';
+import CardHeading from './CardHeading.astro';
+import CardAvailability from './CardAvailability.astro';
+import CardFeatures from './CardFeatures.astro';
+import CardCTA from './CardCTA.astro';
+import CardRecommended from './CardRecommended.astro';
+
+const { apartment } = Astro.props;
+const backgroundImage = `https://loremflickr.com/400/400/apartment?random=${apartment.id}`;
+---
+
+<div
+  class='card'
+  id=`PropertyCard-${apartment.id}`
+  style=`background-image: url(${backgroundImage})`
+>
+  <label for='favorite' class='favorite'>
+    <input id='favorite' type='checkbox' aria-label='favorite' />
+    <span class='fa-stack'>
+      <i class='fas fa-heart fa-stack-1x'></i>
+      <i class='far fa-heart fa-stack-1x'></i>
+    </span>
+  </label>
+
+  <div class='close'>
+    <button
+      hx-on=`click: htmx.toggleClass('#PropertyCard-${apartment.id}', 'open')`
+      value='Close'
+    >
+      <i class='far fa-times-circle fa-lg'></i>
+    </button>
+  </div>
+
+  <CardThumb {apartment} />
+
+  <div class='card-content-full'>
+    <CardCarousel {apartment} />
+    <div class='content-info'>
+      <CardHeading {apartment} />
+      <CardAvailability {apartment} />
+      <CardFeatures {apartment} />
+      <CardCTA {apartment} />
+      <CardRecommended />
+    </div>
+  </div>
+</div>
