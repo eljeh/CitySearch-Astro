@@ -17,7 +17,7 @@
       "@pages/*": [
         "./src/pages/*"
       ],
-      "./src/assets/*": [
+      "@assets/*": [
         "./src/assets/*"
       ]
     },
