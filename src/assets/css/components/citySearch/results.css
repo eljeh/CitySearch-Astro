@@ -11,7 +11,7 @@
 
 /* *************REMOVED FOR TESTING***************** */
 
-/* @media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) {
   .results {
     height: calc(100vh - var(--banner-h));
     background: none !important;
@@ -21,7 +21,7 @@
   .results.has-open {
     height: unset;
  }
-} */
+} 
 @media screen and (orientation: landscape) {
   .results {
     flex: 0 1 28em;
