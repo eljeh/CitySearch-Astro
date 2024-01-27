@@ -1,0 +1,8 @@
+---
+import PropertyCard from '@/components/CitySearch/PropertyList/PropertyCard/PropertyCard.astro';
+import data from '@data/apartmentList.json';
+---
+
+<div id='apartmentsList' class='list'>
+  {data.apartments.map((apartment) => <PropertyCard {apartment} />)}
+</div>

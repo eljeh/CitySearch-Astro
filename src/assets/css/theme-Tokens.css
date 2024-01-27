@@ -277,4 +277,9 @@
   /* Footer Bottom Bar */
   --footer-bottom-bar-background-color: #000000;
   --footer-bottom-bar-text-color: #FFFFFF;
+
+  --knockout-clr: hsl(0deg 0% 100%);
+  --overlay-bs: 0px 1px 10px 2px #00123469;
+  --overlay-ts: 0px 1px 6px #001234ad;
+
 }

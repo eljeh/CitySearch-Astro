@@ -1,9 +1,9 @@
 ---
-import '../../assets/css/components/citySearch/PropertyCard.css';
+import '@assets/css/components/citySearch/PropertyCard.css';
 import CardThumb from './CardThumb.astro';
 
 const { apartment } = Astro.props;
-const backgroundImage = `https://loremflickr.com/400/400/apartment?random=${apartment.id}`;
+const backgroundImage = `https://loremflickr.com/400/400/realestate?random=${apartment.id}`;
 ---
 
 <div
@@ -19,13 +19,5 @@ const backgroundImage = `https://loremflickr.com/400/400/apartment?random=${apar
     </span>
   </label>
 
-  <div class='close'>
-    <button>
-      <i class='far fa-times-circle fa-lg'></i>
-    </button>
-  </div>
-
   <CardThumb {apartment} />
-
 </div>
-

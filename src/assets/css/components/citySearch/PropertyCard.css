@@ -51,8 +51,14 @@
   background: transparent;
   border: none;
   color: white;
+  border-radius: 50%;
 }
+ .card.open .close button:hover {
+  background: var(--global-colors-utility-danger-color)
+} 
 .card.open .close button .far {
+  line-height: 1.1;
+  font-size: 1.5em;
   text-shadow: var(--overlay-ts);
 }
 .card-content-thumb {
@@ -91,7 +97,9 @@
 .card-details .name {
   font-weight: 400;
 }
-.card .btn-look-a-like, .card button {
+
+/* , .card button */
+.card .btn-look-a-like {
   min-width: 44px;
   min-height: 44px;
   background: transparent;
@@ -142,6 +150,7 @@
   align-items: center;
   justify-content: center;
   display: flex;
+  border: 2px solid #292929;
 }
 .card.open .card-content-full .carousel .arrows {
   position: absolute;
@@ -233,6 +242,7 @@
   display: flex;
   font-size: 2em;
   margin-bottom: 0.125em;
+  align-items: center;
 }
 .card.open .card-content-full .content-info .contact-heading .content-details .info-title small {
   display: flex;
@@ -240,7 +250,7 @@
   font-size: 0.35em;
   font-weight: 500;
   line-height: 0.75;
-  margin-top: 2px;
+  margin-bottom: 0.75em;
   margin-left: 2px;
 }
 .card.open .card-content-full .content-info .contact-heading .content-contact {
@@ -258,7 +268,9 @@
   gap: 0.5em;
   flex-direction: row-reverse;
 }
-.card.open .card-content-full .content-info .contact-heading .content-contact .contact-share, .card.open .card-content-full .content-info .contact-heading .content-contact .contact-tel, .card.open .card-content-full .content-info .contact-heading .content-contact .contact-email {
+.card.open .card-content-full .content-info .contact-heading .content-contact .contact-share,
+.card.open .card-content-full .content-info .contact-heading .content-contact .contact-tel,
+.card.open .card-content-full .content-info .contact-heading .content-contact .contact-email {
   border: 0;
   justify-self: end;
 }
@@ -279,7 +291,7 @@
 }
 .card.open .card-content-full .content-info .content-availability .table-availability .availability-row {
   display: grid;
-  grid-template: 'type bath sqft sd availability';
+  grid-template: 'type rent bath sqft availability';
   justify-content: start;
   width: 100%;
 }
@@ -295,8 +307,8 @@
   grid-area: sqft;
   width: 8em;
 }
-.card.open .card-content-full .content-info .content-availability .table-availability .availability-row span.sd {
-  grid-area: sd;
+.card.open .card-content-full .content-info .content-availability .table-availability .availability-row span.rent {
+  grid-area: rent;
   width: 7em;
 }
 .card.open .card-content-full .content-info .content-availability .table-availability .availability-row span.availability {
@@ -306,6 +318,7 @@
 .card.open .card-content-full .content-info .content-availability .table-availability .availability-row.heading {
   font-weight: 600;
   font-size: 1em;
+  margin-bottom: 0em;
 }
 .card.open .card-content-full .content-info .content-features ul {
   display: flex;
@@ -485,7 +498,7 @@
     font-size: 0.35em;
     font-weight: 500;
     line-height: 0.75;
-    margin-top: 2px;
+    margin-bottom: 1.25em;
     margin-left: 2px;
  }
   .card.open .card-content-full .content-info .contact-heading .content-contact {
@@ -507,7 +520,7 @@
     font-weight: 600;
     border-radius: 50%;
     min-width: 44px;
-    min-height: 44px;
+    min-height: 4em !important;
     width: unset !important;
     justify-content: center;
  }
@@ -517,7 +530,9 @@
   .card.open .card-content-full .content-info .contact-heading .content-contact button > .fas {
     display: block !important;
  }
-  .card.open .card-content-full .content-info .contact-heading .content-contact .contact-share, .card.open .card-content-full .content-info .contact-heading .content-contact .contact-tel, .card.open .card-content-full .content-info .contact-heading .content-contact .contact-email {
+  .card.open .card-content-full .content-info .contact-heading .content-contact .contact-share,
+  .card.open .card-content-full .content-info .contact-heading .content-contact .contact-tel,
+  .card.open .card-content-full .content-info .contact-heading .content-contact .contact-email {
     border: 0;
     justify-self: end;
  }
@@ -532,7 +547,7 @@
  }
   .card.open .card-content-full .content-info .content-availability .table-availability .availability-row {
     display: grid;
-    grid-template: 'type bath sqft sd availability';
+    grid-template: 'type rent bath sqft availability';
     justify-content: start;
     width: 100%;
  }
@@ -548,8 +563,9 @@
     grid-area: sqft;
     width: 7em;
  }
-  .card.open .card-content-full .content-info .content-availability .table-availability .availability-row span.sd {
-    display: none;
+  .card.open .card-content-full .content-info .content-availability .table-availability .availability-row span.rent {
+    grid-area: rent;
+    width: 7em;
  }
   .card.open .card-content-full .content-info .content-availability .table-availability .availability-row span.availability {
     grid-area: availability;

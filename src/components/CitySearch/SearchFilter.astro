@@ -1,0 +1,133 @@
+---
+
+---
+
+<div class='filter hidden'>
+  <form id='property-filter' action='href' method='GET'>
+    <h2>Search</h2>
+
+    <!-- {# City #}  -->
+    <div class='form-group has-custom-select'>
+      <label for='city'>City *</label>
+      <select name='city' id='city' class='custom-select' required>
+        <option class='selectOption'>Select...</option>
+        <option selected value='city.hs_path'>city.city</option>
+        <option value='city.hs_path'>city.city</option>
+      </select>
+    </div>
+
+    <!-- {# Neighbourhood #} -->
+    <div class='form-group has-custom-select'>
+      <label for='hood'>Neighbourhood</label>
+      <select name='hood' id='hood' class='custom-select'>
+        <option value='' class='selectOption'>Select ...</option>
+        <option value='selectCity' class='selectCity'
+          >Please select a city first</option
+        >
+      </select>
+    </div>
+
+    <script></script>
+
+    <!-- {# Property Name #} -->
+    <div class='form-control'>
+      <label for='name'>Property Name</label>
+      <input
+        type='text'
+        id='name'
+        name='name'
+        placeholder='Property Name'
+        class='form-control'
+      />
+    </div>
+
+    <!-- {# Pricing #}  -->
+    <div class='form-control custom-slider'>
+      <label>Price:</label>
+      <div class='slider-controls'>
+        <div id='pricingSlider'></div>
+      </div>
+      <input type='hidden' name='pMin' id='pMin' aria-label='Price Min' />
+      <input type='hidden' name='pMax' id='pMax' aria-label='Price Max' />
+    </div>
+
+    <!-- {# Bedrooms #} -->
+    <div class='form-control has-custom-select'>
+      <label for='bed'>Bedrooms</label>
+      <select name='bed' id='bed' class='custom-select'>
+        <option value='' class='selectOption'>Select ...</option>
+      </select>
+    </div>
+
+    <!-- {# Bathrooms #} -->
+    <div class='form-control has-custom-select'>
+      <label for='bed'>Bathrooms</label>
+      <select name='bath' id='bath' class='custom-select'>
+        <option value='' class='selectOption'>Select ...</option>
+        <option value='1-bathroom'>1 Bathroom</option>
+        <option value='2-bathroom'>2 Bathroom</option>
+        <option value='3--bathroom'>3+ Bathroom</option>
+      </select>
+    </div>
+
+    <!-- {# Square footage #}  -->
+    <div class='form-control custom-slider'>
+      <label>SQFT:</label>
+      <div class='slider-controls'>
+        <div id='sqftSlider'></div>
+      </div>
+      <input type='hidden' name='sMin' id='sMin' aria-label='sqft Min' />
+      <input type='hidden' name='sMax' id='sMax' aria-label='sqft Max' />
+    </div>
+
+    <!-- {# Housetype #}  -->
+    <div class='form-group has-custom-select'>
+      <label for='type'>Housing Type</label>
+      <select name='type' id='type' class='custom-select'>
+        <option value='' class='selectOption'>Select ...</option>
+      </select>
+    </div>
+
+    <!-- {# pet_friendly #}  -->
+    <div class='form-group radio-buttons'>
+      <legend>Pet Friendly</legend>
+      <fieldset id='pets' class='form-check'>
+        <div class='form-control'>
+          <input
+            class='form-check-input'
+            type='radio'
+            name='pets'
+            id='yes'
+            value='yes'
+          />
+          <label class='form-check-label' for='yes'>Yes</label>
+        </div>
+
+        <div class='form-control'>
+          <input
+            class='form-check-input'
+            type='radio'
+            name='pets'
+            id='no'
+            value='no'
+          />
+          <label class='form-check-label' for='no'>No</label>
+        </div>
+      </fieldset>
+    </div>
+    <div class='search-reset'>
+      <button
+        id='reset'
+        class='btn btn-outline-primary reset_button'
+        type='reset'
+        value='Reset'>reset</button
+      >
+      <button
+        type='submit'
+        id='search'
+        value='submit'
+        class='btn btn-primary search_option_button'>search</button
+      >
+    </div>
+  </form>
+</div>

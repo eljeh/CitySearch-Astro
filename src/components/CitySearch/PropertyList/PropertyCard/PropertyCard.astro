@@ -1,5 +1,5 @@
 ---
-import '../../assets/css/components/citySearch/PropertyCard.css';
+import '@assets/css/components/CitySearch/PropertyCard.css';
 import CardThumb from './CardThumb.astro';
 
 import CardCarousel from './CardCarousel.astro';
@@ -10,7 +10,7 @@ import CardCTA from './CardCTA.astro';
 import CardRecommended from './CardRecommended.astro';
 
 const { apartment } = Astro.props;
-const backgroundImage = `https://loremflickr.com/400/400/apartment?random=${apartment.id}`;
+const backgroundImage = `https://loremflickr.com/400/400/realestate?random=${apartment.id}`;
 ---
 
 <div
@@ -31,7 +31,7 @@ const backgroundImage = `https://loremflickr.com/400/400/apartment?random=${apar
       hx-on=`click: htmx.toggleClass('#PropertyCard-${apartment.id}', 'open')`
       value='Close'
     >
-      <i class='far fa-times-circle fa-lg'></i>
+      <i class='far fa-times-circle'></i>
     </button>
   </div>
 

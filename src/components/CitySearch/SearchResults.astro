@@ -1,0 +1,70 @@
+---
+import '@assets/css/components/citySearch/results.css';
+import PropertyList from '@components/citySearch/PropertyList/PropertyList.astro';
+---
+
+<div class='results'>
+  <section class='heading'>
+    <h1 class='title-name'>Explore Edmonton Rentals</h1>
+
+    <div class='flex-row'>
+      <h2 class='resultsFound'>Showing 40 Matching Properties</h2>
+
+      <div class='form-group has-custom-select refine-select'>
+        <label class='hide' for='refine'>refine</label>
+        <select name='refine' id='refine' class='custom-select'>
+          <option value=''>Refine</option>
+          <option value=''>Lowest - Hightest</option>
+          <option value=''>Alphabetical</option>
+        </select>
+      </div>
+    </div>
+
+    <div class='controls'>
+      <input type='button' value='filter' class='filterToggle' />
+      <div class='breadcrumbs'>
+        <button>Calgary</button> / <button>1 Bedroom</button> / Apartments
+      </div>
+      <input type='button' value='map' class='mapToggle' />
+    </div>
+
+  </section>
+
+
+
+  <div class='listWrapper'>
+    <PropertyList />
+  </div>
+</div>
+
+
+<style is:inline>
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0 0;
+    padding: 0.5em;
+    border-radius: 0.25em;
+    border: 1px solid;
+  }
+  .controls .breadcrumbs {
+    font-size: 1em;
+  }
+  .controls .breadcrumbs button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  @media screen and (orientation: portrait) {
+    margin: 1em 1em 0;
+    .controls .breadcrumbs {
+      font-size: 0.75em;
+    }
+    .controls .breadcrumbs button {
+    }
+  }
+
+
+  </styles>
