@@ -1,22 +1,22 @@
 /* @import './abstracts/_macros.css'; */
 
-@import  url('@assets/css/theme-Tokens.css');
-@import  url('@assets/css/abstracts/_design-tokens.css');
+@import  url('@css/theme-Tokens.css');
+@import  url('@css/abstracts/_design-tokens.css');
 
 
-@import  url('@assets/css/base/_resets.css');
-@import  url('@assets/css/abstracts/_utilities.css');
-@import  url('@assets/css/base/_typography.css');
+@import  url('@css/base/_resets.css');
+@import  url('@css/abstracts/_utilities.css');
+@import  url('@css/base/_typography.css');
 
 /* @import '/src/assets/css/objects/_layout.css'; */
-@import  url('@assets/css/layouts/_page-defaults.css');
-@import  url('@assets/css/layouts/_layout-nopadding.css');
-@import  url('@assets/css/layouts/_containers-dnd.css');
+@import  url('@css/layouts/_page-defaults.css');
+@import  url('@css/layouts/_layout-nopadding.css');
+@import  url('@css/layouts/_containers-dnd.css');
 
-@import  url('@assets/css/components/_header.css');
-@import  url('@assets/css/components/_footer.css');
-@import  url('@assets/css/components/_buttons.css');
-@import  url('@assets/css/components/_forms.css');
+@import  url('@css/components/_header.css');
+@import  url('@css/components/_footer.css');
+@import  url('@css/components/_buttons.css');
+@import  url('@css/components/_forms.css');
 
 /* @import '/src/assets/css/components/_modules.css'; */
 
