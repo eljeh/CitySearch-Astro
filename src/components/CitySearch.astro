@@ -4,7 +4,8 @@ import '@css/page/citySearch.css';
 import SearchResults from '@components/CitySearch/SearchResults.astro';
 import SearchFilter from '@components/CitySearch/SearchFilter.astro';
 import Map from '@components/CitySearch/Map.astro';
-const page_layout = 'fml';
+const { layout } = Astro.props;
+const page_layout = layout;
 ---
 
 <div class=`container ${page_layout}`>

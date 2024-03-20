@@ -1,6 +1,5 @@
 ---
 const { apartment } = Astro.props;
-
 ---
 
 <div class='carousel'>
@@ -8,7 +7,7 @@ const { apartment } = Astro.props;
     apartment.images.map((image) => {
       const active = apartment.images[0] === image ? 'active' : '';
       return <picture class={active}>
-          <img src=`https://loremflickr.com/758/480/realestate?random=${image}` />
+          <img src=`https://loremflickr.com/758/480/realestate?random=${image}` alt=`${apartment.name} - ${apartment.address} image-${image}`/>
         </picture>;
     })
   }

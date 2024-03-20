@@ -14,9 +14,10 @@ const { apartment } = Astro.props;
     <div class='name'>{apartment.name}</div>
   </div>
 
-  <button
+  <a
     class='btn-look-a-like'
     hx-on=`click: htmx.toggleClass('#PropertyCard-${apartment.id}', 'open')`
+    href=`#PropertyCard-${apartment.id}`
     >Learn More
-  </button>
+  </a>
 </div>

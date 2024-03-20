@@ -5,20 +5,24 @@
   border-radius: 0.25em;
   border: 0.25em solid #fff;
   transition: all 0.25s ease-in-out;
+  color: var(--clr-body-ft);
+}
+.btn-look-a-like:hover, .btn-look-a-like:focus, .btn-look-a-like:active {
+  text-decoration: none;
 }
 .card .favorite {
   position: absolute;
   top: 0em;
   left: 0em;
-  font-size: 1.25em;
+  font-size: 1.5em;
   z-index: 1;
 }
 .card .favorite input {
   zoom: 2;
   position: absolute;
   z-index: 1;
-  top: 4px;
-  left: 7px;
+  top: 3px;
+  left: 3px;
   opacity: 0;
 }
 .card .favorite .fa-stack {
@@ -31,6 +35,9 @@
   text-shadow: var(--overlay-ts);
 }
 .card .favorite:hover .fas {
+  color: rgba(255, 0, 0, 0.801);
+}
+.card .favorite input:checked ~ .fa-stack .fas {
   color: rgba(255, 0, 0, 0.801);
 }
 .card .close {
@@ -98,20 +105,23 @@
   font-weight: 400;
 }
 
-/* , .card button */
+
 .card .btn-look-a-like {
   min-width: 44px;
   min-height: 44px;
-  background: transparent;
-  border: 1px solid darkslategrey;
+  background: white;
+  color: black;
+  border: 1px solid rgb(0, 0, 0);
   font-weight: 600;
   border-radius: 2px;
-}
-.card .btn-look-a-like {
   position: absolute;
   bottom: 1em;
   width: calc(100% - 1em);
-  padding: 0.5em 1.5em
+  padding: 0.5em 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 @media screen and (orientation: portrait) {
   .card .btn-look-a-like {
@@ -133,6 +143,13 @@
   height: unset;
   align-items: end;
 }
+
+.card.open:not(:first-child) {
+  position: relative;
+  top: -378px;
+  margin-bottom: -378px;
+}
+
 .card.open .card-content-full {
   width: 100%;
   display: flex;

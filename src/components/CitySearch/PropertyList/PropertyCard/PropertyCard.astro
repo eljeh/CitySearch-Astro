@@ -2,7 +2,6 @@
 import '@css/components/CitySearch/PropertyCard.css';
 
 import CardThumb from './CardThumb.astro';
-
 import CardCarousel from './CardCarousel.astro';
 import CardHeading from './CardHeading.astro';
 import CardAvailability from './CardAvailability.astro';
@@ -28,10 +27,7 @@ const backgroundImage = `https://loremflickr.com/400/400/realestate?random=${apa
   </label>
 
   <div class='close'>
-    <button
-      hx-on=`click: htmx.toggleClass('#PropertyCard-${apartment.id}', 'open')`
-      value='Close'
-    >
+    <button hx-on=`click: htmx.toggleClass('#PropertyCard-${apartment.id}', 'open')` >
       <i class='far fa-times-circle'></i>
     </button>
   </div>

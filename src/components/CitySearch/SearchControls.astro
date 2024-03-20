@@ -1,0 +1,49 @@
+<div class='controls'>
+	<input type='button' value='Filter' class='btn-flat filterToggle' />
+	<div class='breadcrumbs'>
+		<a href="/calgary">Calgary</a > / <a href="/calgary/1bedroom">1 Bedroom</a> / <a href="/calgary/1bedroom/apartments">Apartments</a>
+	</div>
+	<input type='button' value='Map' class='btn-flat mapToggle' />
+</div>
+
+<style is:inline>
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0 0;
+    border-radius: 0.25em;
+    font-size: 1.25em;
+  }
+
+  .controls .btn-flat {
+    font-size: initial;
+  }
+  .controls .breadcrumbs {
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 55%;
+    width: 100%;
+  }
+  .controls .breadcrumbs a {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    color: var(--clr-form-ft)
+  }
+  .controls .breadcrumbs a:hover {
+    box-shadow: none;
+    scale: 1;
+  }
+  @media screen and (orientation: portrait) {
+    margin: 1em 1em 0;
+    .controls .breadcrumbs {
+      font-size: 0.75em;
+    }
+  }
+</styles>
