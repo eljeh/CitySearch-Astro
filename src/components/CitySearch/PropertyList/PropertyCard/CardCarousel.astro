@@ -2,30 +2,31 @@
 const { apartment } = Astro.props;
 ---
 
-<div class='carousel'>
+
+<div id=`carousel-${apartment.id}` class='carousel'>
   {
-    apartment.images.map((image) => {
+    apartment.images.map((image, i) => {
       const active = apartment.images[0] === image ? 'active' : '';
-      return <picture class={active}>
-          <img src=`https://loremflickr.com/758/480/realestate?random=${image}` alt=`${apartment.name} - ${apartment.address} image-${image}`/>
-        </picture>;
+      return  <picture class={active} data-carousel-index={i}>
+                <img src=`https://loremflickr.com/758/480/realestate?random=${image}` alt=`${apartment.name} - ${apartment.address} image-${image}`/>
+              </picture>;
     })
   }
 
   <div class='arrows'>
-    <div class='arrow prev'>
+    <div class='arrow prev' hx-on:click="prevSlide()">
       <i class='fas fa-chevron-left fa-2x'></i>
     </div>
-    <div class='arrow next'>
+    <div class='arrow next' hx-on:click="nextSlide()">
       <i class='fas fa-chevron-right fa-2x'></i>
     </div>
   </div>
 
   <div class='dots'>
     {
-      apartment.images.map((image) => {
+      apartment.images.map((image, i) => {
         const active = apartment.images[0] === image ? 'active' : '';
-        return <div class=`dot ${active}`></div>;
+        return <div class=`dot ${active}` data-carousel-index={i} hx-on:click="activeDot()"></div>;
       })
     }
   </div>
@@ -36,3 +37,57 @@ const { apartment } = Astro.props;
     display: none !important;
   }
 </style>
+
+<script>
+  // JavaScript to handle multiple carousels on a page
+document.addEventListener("DOMContentLoaded", function() {
+  // Get all carousel containers
+  const carousels = document.querySelectorAll('.carousel');
+
+  // Iterate over each carousel
+  carousels.forEach(carousel => {
+    const images = carousel.querySelectorAll('picture');
+    const dots = carousel.querySelectorAll('.dot');
+    let currentSlide = 0;
+
+    // Function to show previous slide
+    function prevSlide() {
+      images[currentSlide].classList.remove('active');
+      dots[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide - 1 + images.length) % images.length;
+      images[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+    }
+
+    // Function to show next slide
+    function nextSlide() {
+      images[currentSlide].classList.remove('active');
+      dots[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % images.length;
+      images[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+    }
+
+    // Function to navigate to a specific slide by clicking on a dot
+    function activeDot() {
+      const dotIndex = parseInt(this.getAttribute('data-carousel-index'));
+      if (dotIndex !== currentSlide) {
+        images[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+        currentSlide = dotIndex;
+        images[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+      }
+    }
+
+    // Add event listeners to prev and next arrows
+    carousel.querySelector('.arrow.prev').addEventListener('click', prevSlide);
+    carousel.querySelector('.arrow.next').addEventListener('click', nextSlide);
+
+    // Add event listeners to dots
+    dots.forEach(dot => {
+      dot.addEventListener('click', activeDot);
+    });
+  });
+});
+</script>
