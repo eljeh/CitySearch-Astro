@@ -166,7 +166,7 @@
   --forms-fields-border-left-color: #D1D6DC;
 
   /* Forms Fields Border Radius */
-  --forms-fields-border-radius: 3px;
+  --forms-fields-border-radius: 0.25em;
 
   /* Forms */
   --forms-background-color: #FFFFFF;
@@ -247,7 +247,7 @@
   --forms-fields-border-left-color: #D1D6DC;
 
   /* Forms Fields Border Radius */
-  --forms-fields-border-radius: 3px;
+  --forms-fields-border-radius: 0.25em;
 
   --spacing-vertical-spacing: 80px;
   --spacing-maximum-content-width: 1240px;

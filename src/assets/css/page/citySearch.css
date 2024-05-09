@@ -33,13 +33,13 @@ main{
 }   
 .heading {
   margin-bottom: 1em;
-  font-size: 0.75em;
+  font-size: 1em;
 }
 .heading .title-name{
   margin: 0 0 0.5em;
   color: var(--clr-primary);
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 .heading .flex-row{
   align-items: end;
@@ -54,7 +54,7 @@ main{
   min-width: max-content;
   width: 12em;
   flex: unset;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .gm-style img {
@@ -174,10 +174,12 @@ div#map {
 }
 section.heading {
   background: var(--clr-form-bg);
-  border-radius: 0.25em;
+  border-radius: 0.5em;
   color: var(--clr-form-ft);
   margin-top: 0.5em;
   padding: 1em 1.5em;
+  box-shadow: 0px 1px 8px 1px #001c5154;
+  z-index: 1;
 }
 div#map {
   padding: 0;

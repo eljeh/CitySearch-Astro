@@ -121,7 +121,7 @@
  --input-border-right: { forms-fields-border_border.right.width}{ forms-fields-border_border.top.width.units} { forms-fields-border_border.right.style} { forms-fields-border_border.right };
  --input-border-bottom: { forms-fields-border_border.bottom.width}{ forms-fields-border_border.bottom.width.units} { forms-fields-border_border.bottom.style} { forms-fields-border_border.bottom };
  --input-border-left: { forms-fields-border_border.left.width}{ forms-fields-border_border.left.width.units} { forms-fields-border_border.left.style} { forms-fields-border_border.left };
- --input-border-rd: { forms-fields-border_radius }px;
+ --input-border-rd: { forms-fields-border_radius };
 
 
 

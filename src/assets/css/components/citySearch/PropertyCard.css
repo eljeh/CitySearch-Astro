@@ -1,11 +1,12 @@
 .card {
   background-position: center center;
   background-size: cover;
-  box-shadow: 1px 1px 9px 0px #000 42;
-  border-radius: 0.25em;
+  border-radius: 0.75em;
   border: 0.25em solid #fff;
   transition: all 0.25s ease-in-out;
   color: var(--clr-body-ft);
+  box-shadow: 0px 1px 36px 0px #001c51ad;
+  overflow: hidden;
 }
 .btn-look-a-like:hover, .btn-look-a-like:focus, .btn-look-a-like:active {
   text-decoration: none;
@@ -46,15 +47,15 @@
 .card.open .close {
   position: absolute;
   display: block;
-  top: 0.25em;
-  right: 0.25em;
-  font-size: 1.5em;
+  top: 0.5em;
+  right: 0.5em;
+  font-size: 1.25em;
   z-index: 1;
 }
 .card.open .close button {
   padding: 0;
-  min-width: 44px;
-  min-height: 44px;
+  min-width: 0.5em;
+  min-height: 0.5em;
   background: transparent;
   border: none;
   color: white;
@@ -74,7 +75,7 @@
   justify-content: flex-start;
   position: relative;
   margin: -1px;
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(237,243,250,0.88);
   backdrop-filter: blur(4px);
   align-self: end;
   width: 100%;
@@ -109,11 +110,8 @@
 .card .btn-look-a-like {
   min-width: 44px;
   min-height: 44px;
-  background: white;
   color: black;
-  border: 1px solid rgb(0, 0, 0);
   font-weight: 600;
-  border-radius: 2px;
   position: absolute;
   bottom: 1em;
   width: calc(100% - 1em);
@@ -122,6 +120,15 @@
   align-items: center;
   justify-content: center;
   line-height: 1;
+  background-color: var(--clr-input-bg);
+  border-top: var(--input-border-top);
+  border-bottom: var(--input-border-bottom);
+  border-left: var(--input-border-left);
+  border-right: var(--input-border-right);
+  border-radius: var(--input-border-rd);
+  border-color: transparent;
+  box-shadow: var(--overlay-ts);
+
 }
 @media screen and (orientation: portrait) {
   .card .btn-look-a-like {
@@ -141,6 +148,7 @@
   min-height: 12em;
   height: unset;
   align-items: end;
+  border: 0.5em solid #ffffff;
 }
 
 .card.open:not(:first-child) {
@@ -153,12 +161,15 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(237,243,250,0.88);
   backdrop-filter: blur(8px);
 }
 .card.open .card-content-full .carousel {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden;
+  border-top-left-radius: 0.75em;
+  border-top-right-radius: 0.75em;
+  border: 4px solid #ffffff; */
 }
 .card.open .card-content-full .carousel picture {
   aspect-ratio: 1.618;
@@ -166,7 +177,6 @@
   align-items: center;
   justify-content: center;
   display: flex;
-  border: 2px solid #292929;
 }
 .card.open .card-content-full .carousel .arrows {
   position: absolute;
@@ -191,6 +201,7 @@
   height: 6em;
   background-color: #000;
   border-radius: 50%;
+  cursor: pointer;
 }
 .card.open .card-content-full .carousel .arrows .arrow.prev:before {
   left: -3em;
@@ -226,6 +237,7 @@
   background-color: white;
   border-radius: 50%;
   box-shadow: var(--overlay-bs);
+  cursor: pointer;
 }
 .card.open .card-content-full .carousel .dots .dot.active::before {
   background-color: black;
@@ -275,6 +287,7 @@
   gap: 0.25em;
 }
 .card.open .card-content-full .content-info .contact-heading .content-contact * {
+  background: transparent;
   padding: 0;
   line-height: 1;
   display: flex;
@@ -282,7 +295,7 @@
   justify-content: end;
   align-items: center;
   gap: 0.5em;
-  flex-direction: row-reverse;
+  /* flex-direction: row-reverse; */
 }
 .card.open .card-content-full .content-info .contact-heading .content-contact .contact-share,
 .card.open .card-content-full .content-info .contact-heading .content-contact .contact-tel,
@@ -293,17 +306,20 @@
 .card.open .card-content-full .content-info .contact-heading .content-contact .contact-share {
   width: 13ch;
 }
+.card.open .card-content-full .content-info .contact-heading .content-contact .contact-share .fas {
+  font-size: 1.25em;
+}
 .card.open .card-content-full .content-info .contact-heading .content-contact .contact-tel {
   width: 19ch;
 }
 .card.open .card-content-full .content-info .contact-heading .content-contact .contact-tel .fas {
-  display: none;
+  /* display: none; */
 }
 .card.open .card-content-full .content-info .contact-heading .content-contact .contact-email {
   width: 12ch;
 }
 .card.open .card-content-full .content-info .contact-heading .content-contact .contact-email .fas {
-  display: none;
+  /* display: none; */
 }
 .card.open .card-content-full .content-info .content-availability .table-availability .availability-row {
   display: grid;
@@ -358,7 +374,7 @@
   padding: 0;
 }
 .card.open .card-content-full .content-info .recommended .list .card {
-  max-width: 19em;
+  max-width: 18.75em;
   height: 10em;
   flex-direction: column;
   justify-content: space-between;
@@ -366,6 +382,7 @@
   background-repeat: no-repeat;
   background-position: center left;
   background-origin: border-box;
+  box-shadow: var(--overlay-ts);
 }
 .card.open .card-content-full .content-info .recommended .list .card .card-content-thumb {
   width: 62%;
@@ -659,8 +676,8 @@
   display: none !important;
 }
 .card:not(.open):hover {
-  box-shadow: 0px 0px 5px 0px #000 2b;
-  transform: scale(1.03);
+  /* box-shadow: 0px 0px 5px 0px #000; */
+  /* transform: scale(1.03); */
   z-index: 5;
 }
 .card.open > .card-content-thumb {

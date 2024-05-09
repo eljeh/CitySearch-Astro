@@ -152,7 +152,7 @@
   --input-border-right: var(--forms-fields-border-right-width) var(--forms-fields-border-right-style) var(--forms-fields-border-right-color);
   --input-border-bottom: var(--forms-fields-border-bottom-width) var(--forms-fields-border-bottom-style) var(--forms-fields-border-bottom-color);
   --input-border-left: var(--forms-fields-border-left-width) var(--forms-fields-border-left-style) var(--forms-fields-border-left-color);
-  --input-border-rd: var(--forms-fields-border-radius)px;
+  --input-border-rd: var(--forms-fields-border-radius);
 
 
 
