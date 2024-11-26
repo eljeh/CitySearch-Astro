@@ -1,8 +1,8 @@
 :root {
   /* Global colors */
-  --global-colors-primary-color: #0077ff;
-  --global-colors-secondary-color: #00008B;
-  --global-colors-tertiary-color: #000;
+  --global-colors-primary-color: hsl(0, 0%, 37%);
+  --global-colors-secondary-color: hsl(235, 0%, 50%);
+  --global-colors-tertiary-color: hsl(0, 0%, 0%);
 
   --global-colors-page-color: #fff;
   --global-colors-page-body-font-color: #000000;
@@ -31,6 +31,7 @@
   --typography-desktop-baseText-size: 16px;
   --typography-desktop-baseText-transform: none;
   --typography-desktop-baseText-lineHeight: 1.2;
+  --typography-desktop-baseText-weight: 500;
 
   --typography-desktop-pageHeading-font: 'Montserrat', sans-serif;
   --typography-desktop-pageHeading-fallback: sans-serif;

@@ -10,22 +10,22 @@ import '@css/components/CitySearch/Filter.css';
     <div class='form-group has-custom-select'>
       <select name='city' id='city' class='custom-select' required>
         <option class='selectOption'>Select...</option>
-        <option selected value='city.hs_path'>Calgary</option>
-        <option value='city.hs_path'>Edmonton</option>
-        <option value='city.hs_path'>Red Deer</option>
+        <option selected value='calgary'>Calgary</option>
+        <option value='edmonton'>Edmonton</option>
+        <option value='red_deer'>Red Deer</option>
       </select>
       <label for='city'>City *</label>
     </div>
 
     <!-- {# Pricing #}  -->
     <div class='form-control has-custom-select'>
-      <select name='bath' id='bath' class='custom-select'>
+      <select name='price' id='price' class='custom-select'>
         <option value='any'>Any</option>
         <option value='2-bathroom'> 500</option>
         <option value='2-bathroom'> 1000</option>
         <option value='2-bathroom'> 1500</option>
       </select>
-      <label>Price:</label>
+      <label for='price'>Price:</label>
     </div>
 
     <!-- {# Bedrooms #} -->
@@ -73,7 +73,6 @@ import '@css/components/CitySearch/Filter.css';
 
     <!-- {# pet_friendly #}  -->
     <div class='form-group radio-buttons'>
-
       <fieldset id='pets' class='form-check'>
         <div class='form-control'>
           <input
@@ -120,3 +119,32 @@ import '@css/components/CitySearch/Filter.css';
     font-weight: 600;
   }
 </style>
+
+<script>
+  // Select all elements with class custom-select
+  const customSelects = document.querySelectorAll('.custom-select');
+
+  // Add event listener to each custom select
+  customSelects.forEach((select) => {
+    select.addEventListener('change', (e) => {
+      const selectedOption = e.target.options[e.target.selectedIndex];
+      const label = e.target.nextElementSibling;
+      label.textContent = selectedOption.textContent;
+    });
+  });
+
+  // Add event listener to the search button
+  const searchButton = document.getElementById('search');
+  if (searchButton) {
+    searchButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      const form = document.getElementById('property-filter');
+      const formData = new FormData(form);
+      const searchParams = new URLSearchParams(formData);
+      const searchQuery = searchParams.toString();
+      const actionUrl = '?' + searchQuery; // Adjust this URL according to your endpoint
+      form.setAttribute('action', actionUrl); // Set the action attribute of the form
+      form.submit(); // Submit the form
+    });
+  }
+</script>

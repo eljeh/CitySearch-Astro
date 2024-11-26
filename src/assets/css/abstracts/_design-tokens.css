@@ -29,6 +29,7 @@
   /* Font Family */
   --ff-heading: var(--typography-desktop-heading-font);
   --ff-body: var(--typography-desktop-baseText-font);
+  --fw-body: var(--typography-desktop-baseText-weight); 
   --fluid-logo: var(--fluid_logo);
 
   /* font Sizes */

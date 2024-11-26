@@ -8,6 +8,7 @@ body{
   font-size: var(--fs-base);
   line-height: var(--lh-body);
   font-family:var(--ff-body);
+  font-weight: var(--fw-body);
 }
 
 

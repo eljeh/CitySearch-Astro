@@ -18,8 +18,13 @@ const backgroundImage = `https://loremflickr.com/400/400/realestate?random=${apa
   id=`PropertyCard-${apartment.id}`
   style=`background-image: url(${backgroundImage})`
 >
-  <label for='favorite' class='favorite'>
-    <input id='favorite' type='checkbox' aria-label='favorite' />
+  <label for=`favorite-${apartment.id}` class='favorite'>
+    <span class='sr-only'>Favorite</span>
+    <input
+      id=`favorite-${apartment.id}`
+      type='checkbox'
+      aria-label='favorite'
+    />
     <span class='fa-stack'>
       <i class='fas fa-heart fa-stack-1x'></i>
       <i class='far fa-heart fa-stack-1x'></i>
@@ -27,7 +32,9 @@ const backgroundImage = `https://loremflickr.com/400/400/realestate?random=${apa
   </label>
 
   <div class='close'>
-    <button hx-on=`click: htmx.toggleClass('#PropertyCard-${apartment.id}', 'open')` >
+    <button
+      hx-on=`click: htmx.toggleClass('#PropertyCard-${apartment.id}', 'open')`
+    >
       <i class='far fa-times-circle'></i>
     </button>
   </div>
