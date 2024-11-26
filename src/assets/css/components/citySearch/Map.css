@@ -1,6 +1,6 @@
 .map{
 	grid-area: map;
-	background-image: url(https://fglvoice.ca/wp-content/uploads/2013/08/100-King-St-W-Google-Maps-1249x800.png);
+	/* background-image: url(https://fglvoice.ca/wp-content/uploads/2013/08/100-King-St-W-Google-Maps-1249x800.png); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
