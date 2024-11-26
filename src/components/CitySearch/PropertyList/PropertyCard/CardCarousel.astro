@@ -4,14 +4,14 @@ const { apartment } = Astro.props;
 
 
 <div id=`carousel-${apartment.id}` class='carousel'>
-  <!-- {
+  {
     apartment.images.map((image, i) => {
       const active = apartment.images[0] === image ? 'active' : '';
       return  <picture class={active} data-carousel-index={i}>
                 <img src=`https://loremflickr.com/758/480/realestate?random=${image}` alt=`${apartment.name} - ${apartment.address} image-${image}`/>
               </picture>;
     })
-  } -->
+  }
 
   <div class='arrows'>
     <div class='arrow prev' hx-on:click="prevSlide()">
