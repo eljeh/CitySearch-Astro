@@ -1,4 +1,4 @@
-export default apartments = [
+export const apartments = [
 	{
 		"id": 1,
 		"name": "Cozy Corner Apartments",
