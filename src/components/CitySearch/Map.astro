@@ -1,7 +1,21 @@
----
-import '../../assets/css/components/CitySearch/Map.css';
----
-
 <div class='mapHolder fullscreen'>
   <div id='map' class='map'></div>
 </div>
+
+<style is:inline>
+  .map {
+    grid-area: map;
+    background-image: url(https://fglvoice.ca/wp-content/uploads/2013/08/100-King-St-W-Google-Maps-1249x800.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - var(--header-h));
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+  }
+  .mapHolder.fullscreen {
+    grid-column: 1 / 5;
+    grid-row: 1 / 4;
+  }
+</style>

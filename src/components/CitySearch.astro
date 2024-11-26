@@ -1,12 +1,7 @@
 ---
-//import './src/assets/css/page/citySearch.css';
 import SearchResults from './CitySearch/SearchResults.astro';
 import SearchFilter from './CitySearch/SearchFilter.astro';
 import Map from './CitySearch/Map.astro';
-
-//import SearchResults from './src/components/CitySearch/SearchResults.astro';
-//import SearchFilter from './src/components/CitySearch/SearchFilter.astro';
-//import Map from './src/components/CitySearch/Map.astro';
 
 const { layout } = Astro.props;
 const page_layout = layout;
@@ -17,3 +12,186 @@ const page_layout = layout;
   <SearchFilter />
   <Map />
 </div>
+
+<style is:inline>
+  /*****************************************/
+  /*      City Search declarations         */
+  /*****************************************/
+
+  .hide {
+    display: none !important;
+  }
+  * {
+    scroll-behavior: smooth;
+  }
+  header {
+    z-index: 4;
+  }
+
+  .light.filter,
+  .light.list-wrapper,
+  .light.results-panel {
+    background: #fff a6;
+    backdrop-filter: blur(2px);
+    box-shadow: 1px 1px 20px 1px #c7c7c7;
+  }
+  .dark.filter,
+  .dark.list-wrapper,
+  .dark.results-panel {
+    background: #333538 6b;
+    backdrop-filter: blur(2px);
+    box-shadow: 1px 1px 20px 1px black;
+  }
+  .shadow.filter,
+  .shadow.list-wrapper,
+  .shadow.results-panel {
+    background: #b4b4b4 6b;
+    backdrop-filter: blur(2px);
+    box-shadow: 1px 1px 20px 1px #8f8f8f;
+  }
+
+  main {
+    margin: 0 calc(var(--page-pd) * -1);
+  }
+  .heading {
+    margin-bottom: 1em;
+    font-size: 1em;
+  }
+  .heading .title-name {
+    margin: 0 0 0.5em;
+    color: var(--clr-primary);
+    text-align: center;
+    font-size: 1.5em;
+  }
+  .heading .flex-row {
+    align-items: end;
+    gap: 0.5em;
+  }
+  .heading .resultsFound {
+    flex: unset;
+    min-width: 10.5em;
+    font-size: 1.2em;
+  }
+  .heading .refine-select {
+    min-width: max-content;
+    width: 12em;
+    flex: unset;
+    font-size: 1em;
+  }
+
+  .gm-style img {
+    max-width: 24em;
+  }
+
+  .container {
+    display: grid;
+    --filter-size: minmax(max-content, 16vw);
+    --list-size: minmax(min-content, 51.5rem);
+    --map-size: 1fr;
+  }
+  .container.fml {
+    grid-template-columns: 25vw 1fr 25vw;
+    grid-template-columns: var(--filter-size) var(--map-size) var(--list-size);
+    grid-template-rows: auto;
+    grid-template-areas:
+      'filter map list'
+      'filter map list'
+      'filter map list';
+  }
+  .container.lmf {
+    grid-template-columns: 25vw 1fr 25vw;
+    grid-template-columns: var(--list-size) var(--map-size) var(--filter-size);
+    grid-template-rows: auto;
+    grid-template-areas:
+      'list map filter'
+      'list map filter'
+      'list map filter';
+  }
+  .container.flm {
+    grid-template-columns: 25vw 1fr 1fr;
+    grid-template-columns: var(--filter-size) var(--list-size) var(--map-size);
+    grid-template-rows: auto;
+    grid-template-areas:
+      'filter list map'
+      'filter list map'
+      'filter list map';
+  }
+  .container.fl-ml {
+    grid-template-columns: 1fr 1fr 25vw;
+    grid-template-rows: 25vh 1fr 1fr;
+    grid-template-areas:
+      'filter filter list'
+      'map map list'
+      'map map list';
+  }
+
+  .filter {
+    grid-area: filter;
+    z-index: 1;
+    position: sticky;
+    top: var(--header-h);
+    height: calc(100vh - var(--header-h));
+    min-width: fit-content;
+  }
+
+  .results {
+    padding: 1em 1.5em;
+    grid-area: list;
+    z-index: 1;
+    min-width: fit-content;
+  }
+
+  .search-reset {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1em;
+  }
+  .search_option_button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Map */
+
+  div#map {
+    padding: 1em 0;
+  }
+
+  div#map {
+    height: 100%;
+  }
+
+  .container.f-ml {
+    grid-template-columns: 25vw 50vw 25vw;
+    grid-template-rows: 25vh 50vh 25vh;
+    grid-template-areas:
+      'filter filter list'
+      'map map list'
+      'map map list';
+  }
+
+  .filter,
+  .results {
+    background: #dae1e980;
+    backdrop-filter: blur(3px);
+    box-shadow: 1px 1px 20px 1px #8f8f8f;
+  }
+  .filter {
+    padding: 1em;
+  }
+  .filter form {
+    padding: 1em;
+  }
+  section.heading {
+    background: var(--clr-form-bg);
+    border-radius: 0.5em;
+    color: var(--clr-form-ft);
+    margin-top: 0.5em;
+    padding: 1em;
+    box-shadow: 0px 1px 8px 1px #001c5154;
+    z-index: 1;
+  }
+  div#map {
+    padding: 0;
+  }
+</style>
