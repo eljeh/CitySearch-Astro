@@ -1,12 +1,13 @@
 ---
-import data from './src/data/apartmentList.json';
+//import data from './src/data/apartmentList.json';
+import apartments from '../../../../data/apartments';
 import PropertyThumbnail from './PropertyThumbnail.astro';
 ---
 
 <div class='recommended hide1'>
   <h3 class='title'>You may also like....</h3>
   <div class='list'>
-    <PropertyThumbnail apartment={data.apartments[5]} />
-    <PropertyThumbnail apartment={data.apartments[14]} />
+    <PropertyThumbnail apartment={apartments[5]} />
+    <PropertyThumbnail apartment={apartments[14]} />
   </div>
 </div>
