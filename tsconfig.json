@@ -5,10 +5,10 @@
       "@/*": [
         "./src/*"
       ],
-      "@components/*": [
+      "./src/components/*": [
         "./src/components/*"
       ],
-      "@data/*": [
+      "./src/data/*": [
         "./src/data/*"
       ],
       "@layouts/*": [
@@ -17,7 +17,7 @@
       "@pages/*": [
         "./src/pages/*"
       ],
-      "@css/*": [
+      "./src/assets/css/*": [
         "./src/assets/css/*"
       ]
     },

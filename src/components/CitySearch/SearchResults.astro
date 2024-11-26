@@ -1,7 +1,7 @@
 ---
-import '@css/components/CitySearch/Results.css';
-import PropertyList from '@components/CitySearch/PropertyList/PropertyList.astro';
-import SearchControls from '@components/CitySearch/SearchControls.astro';
+import './src/assets/css/components/CitySearch/Results.css';
+import PropertyList from './src/components/CitySearch/PropertyList/PropertyList.astro';
+import SearchControls from './src/components/CitySearch/SearchControls.astro';
 const searchQuery = Astro.props;
 ---
 
@@ -10,8 +10,7 @@ const searchQuery = Astro.props;
     <h1 class='title-name'>Explore Calgary Rentals</h1>
 
     <div class='flex-row'>
-      <h2 class='resultsFound'>
-        Showing 40 Matching Properties</h2>
+      <h2 class='resultsFound'>Showing 40 Matching Properties</h2>
 
       <div class='form-group has-custom-select refine-select'>
         <label class='hide' for='refine'>refine</label>
