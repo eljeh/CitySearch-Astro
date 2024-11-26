@@ -1,57 +1,62 @@
 ---
-import PropertyCard from './src/components/CitySearch/PropertyList/PropertyCard/PropertyCard.astro';
-import data from './src/data/apartmentList.json';
+
+import PropertyCard from './PropertyCard/PropertyCard.astro';
+import {apartments} from '../../../data/apartments.js';
+
+
+//import PropertyCard from './src/components/CitySearch/PropertyList/PropertyCard/PropertyCard.astro';
+///import data from './src/data/apartmentList.json';
 ---
 
 <div id='apartmentsList' class='list'>
-  {data.apartments.map((apartment) => <PropertyCard {apartment} />)}
+  {apartments.map((apartment) => <PropertyCard {apartment} />)}
 </div>
 
 <script>
   // Function to parse URL parameters
-  const getURLParams = () => {
-    const searchParams = new URLSearchParams(window.location.search);
-    const params = {};
-    for (const [key, value] of searchParams.entries()) {
-      params[key] = value;
-    }
-    return params;
-  };
+  // const getURLParams = () => {
+  //   const searchParams = new URLSearchParams(window.location.search);
+  //   const params = {};
+  //   for (const [key, value] of searchParams.entries()) {
+  //     params[key] = value;
+  //   }
+  //   return params;
+  // };
 
   // Filter apartments based on URL parameters
-  const filterApartments = () => {
-    const params = getURLParams();
-    let filteredApartments = data.apartments;
+  //const filterApartments = () => {
+  //  const params = getURLParams();
+    // let filteredApartments = apartments;
 
-    // Filter by city
-    if (params.city) {
-      filteredApartments = filteredApartments.filter(
-        (apartment) =>
-          apartment.city.toLowerCase() === params.city.toLowerCase(),
-      );
-    }
+    // // Filter by city
+    // if (params.city) {
+    //   filteredApartments = filteredApartments.filter(
+    //     (apartment) =>
+    //       apartment.city.toLowerCase() === params.city.toLowerCase(),
+    //   );
+    // }
 
-    // Filter by number of bathrooms
-    if (params.bath) {
-      filteredApartments = filteredApartments.filter(
-        (apartment) =>
-          apartment.bathrooms.toLowerCase() === params.bath.toLowerCase(),
-      );
-    }
+    // // Filter by number of bathrooms
+    // if (params.bath) {
+    //   filteredApartments = filteredApartments.filter(
+    //     (apartment) =>
+    //       apartment.bathrooms.toLowerCase() === params.bath.toLowerCase(),
+    //   );
+    // }
 
     // Filter by other parameters as needed
 
-    return filteredApartments;
-  };
+   // return filteredApartments;
+  //};
 
-  const filteredApartments = filterApartments();
+ // const filteredApartments = filterApartments();
 
   // Check if there are any filtered apartments
-  if (filteredApartments.length === 0) {
-    document.getElementById('apartmentsList').innerHTML =
-      '<p>No apartments found.</p>';
-  } else {
-    // Render filtered apartments
-    document.getElementById('apartmentsList').innerHTML = '<p>found Some</p>';
-  }
+  // if (filteredApartments.length === 0) {
+  //   document.getElementById('apartmentsList').innerHTML =
+  //     '<p>No apartments found.</p>';
+  // } else {
+  //   // Render filtered apartments
+  //   document.getElementById('apartmentsList').innerHTML = '<p>found Some</p>';
+  // }
 </script>
