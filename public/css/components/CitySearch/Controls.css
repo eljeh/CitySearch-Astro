@@ -1,0 +1,28 @@
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 1.618em 0;
+  background: white;
+  padding: 0.25em;
+  box-shadow: 1px 1px 9px 0px #000 42;
+  border-radius: 0.25em;
+  border: 0.25em solid white;
+}
+.controls h1 {
+  font-size: 1em;
+}
+.controls button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  min-width: 44px;
+  min-height: 44px;
+}
+@media screen and (orientation: portrait) {
+  .controls {
+    margin: 1em 1em 0;
+ }
+  .controls h1 {
+    font-size: 0.75em;
+ }
+}

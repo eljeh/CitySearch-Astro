@@ -1,0 +1,18 @@
+/*****************************************/
+/*          Utility declarations         */
+/*****************************************/
+
+.center-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-row>* {
+  flex: 0 0 calc(50% - 1em);
+}

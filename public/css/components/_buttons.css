@@ -1,0 +1,256 @@
+/* @import url('http://example.com/example_style.css'); */
+
+/***********************************************/
+/* CSS @imports must be at the top of the file */
+/* Add them above this section                 */
+/***********************************************/
+
+/*****************************************/
+/* Start your style declarations here    */
+/*****************************************/
+a.btn,
+button,
+.button {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  text-align: center;
+  transition: all 0.15s linear;
+  white-space: normal;
+  padding: 1em 1.5em;
+}
+
+button:disabled,
+.button:disabled {
+  background-color: #D0D0D0;
+  border-color: #D0D0D0;
+  color: #E6E6E6;
+}
+
+a.btn:hover,
+a.btn:focus,
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  text-decoration: none;
+}
+a.btn:active,
+button:active,
+.button:active {
+  text-decoration: none;
+  scale: 0.99;
+}
+
+/* New Style Button css */
+
+form input[type=submit],
+form .hs-button,
+.btn {
+	display: inline-flex;
+	font-weight: 600;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	user-select: none;
+	border: 1px solid transparent;
+	padding: .5em 1.5em;
+	font-family: Montserrat;
+	border-radius: 5px;
+	transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	align-items: center;
+	text-transform: uppercase;
+}
+form input[type=submit],
+form .hs-button,
+.btn.btn-primary,
+button.btn.btn-primary {
+	color: #fff;
+	background-color: #0077ff;
+	border-color: #0077ff;
+}
+form input[type=submit]:hover,
+form .hs-button:hover,
+.btn.btn-primary:hover,
+button.btn.btn-primary:hover,
+.btn.btn-primary:focus,
+button.btn.btn-primary:focus {
+	color: #fff;
+	background-color: #000000;
+	border-color: #000000;
+}
+.btn.btn-outline-primary,
+button.btn.btn-outline-primary {
+	color: #0077ff;
+	background-color: transparent;
+	background-image: none;
+	border-color: #0077ff;
+}
+.btn.btn-outline-primary:hover,
+button.btn.btn-outline-primary:hover,
+.btn.btn-outline-primary:focus,
+button.btn.btn-outline-primary:focus {
+	color: #fff;
+	background-color: #0077ff;
+	border-color: #0077ff;
+}
+.btn.btn-secondary,
+button.btn.btn-secondary{
+	color: #fff;
+	background-color: #00008B;
+	border-color: #00008B;
+}
+.btn.btn-secondary:hover,
+button.btn.btn-secondary:hover,
+.btn.btn-secondary:focus,
+button.btn.btn-secondary:focus {
+	color: #fff;
+	background-color: #0077ff;
+	border-color: #0077ff;
+}
+.btn.btn-outline-secondary,
+button.btn.btn-outline-secondary {
+	color: #00008B;
+	background-color: transparent;
+	background-image: none;
+	border-color: #00008B;
+}
+.btn.btn-outline-secondary:hover,
+button.btn.btn-outline-secondary:hover,
+.btn.btn-outline-secondary:focus,
+button.btn.btn-outline-secondary:focus {
+	color: #fff;
+	background-color: #00008B;
+	border-color: #00008B;
+}
+.btn.btn-white,
+button.btn.btn-white {
+	color: #0077ff;
+	background-color: #fff;
+	border-color: #fff;
+}
+.btn.btn-white:hover,
+button.btn.btn-white:hover,
+.btn.btn-white:focus,
+button.btn.btn-white:focus {
+	color: #fff;
+	background-color: #000;
+	border-color: #000;
+}
+.btn.btn-outline-white,
+button.btn.btn-outline-white {
+	color: #fff;
+	background-color: transparent;
+	background-image: none;
+	border-color: #fff;
+}
+.btn.btn-outline-white:hover,
+button.btn.btn-outline-white:hover,
+.btn.btn-outline-white:focus,
+button.btn.btn-outline-white:focus {
+	color: #000 ;
+	background-color: #fff;
+	background-image: none ;
+	border-color: #fff ;
+}
+.btn.btn-dark,
+button.btn.btn-dark {
+	color: #fff;
+	background-color: #000;
+	border-color: #000;
+}
+.btn.btn-dark:hover,
+button.btn.btn-dark:hover,
+.btn.btn-dark:focus,
+button.btn.btn-dark:focus {
+	color: #0077ff;
+	background-color: #fff;
+	border-color: #fff;
+}
+.btn.btn-outline-dark,
+button.btn.btn-outline-dark {
+	color: #000;
+	background-color: transparent;
+	background-image: none;
+	border-color: #000;
+}
+.btn.btn-outline-dark:hover,
+button.btn.btn-outline-dark:hover,
+.btn.btn-outline-dark:focus,
+button.btn.btn-outline-dark:focus {
+	color: #fff;
+	background-color: #000;
+	border-color: #000;
+}
+.btn.btn-link,
+button.btn.btn-link {
+	color: #00008B;
+	background-color: transparent;
+	padding: 0;
+}
+.btn.btn-link:hover,
+button.btn.btn-link:hover,
+.btn.btn-link:focus,
+button.btn.btn-link:focus {  
+	color: #0077ff;
+	background-color: transparent;
+}
+
+.button, input.hs-button.primary {
+	font-family: Montserrat, sans-serif; font-style: normal; font-weight: normal; text-decoration: none;
+	font-family: Montserrat;
+	position: relative;
+	padding: 14px 28px ;	
+	display: inline-block;
+	font-weight: 600;
+	background-color:rgba(0, 119, 255, 1.0) ;
+	color: #fff ;
+	border: 0px solid #0077ff;
+	border-radius: 5px ;
+	text-transform: uppercase ;		
+	transition: .3s;
+}
+.button, input.hs-button.primary:hover,
+.button, input.hs-button.primary:focus {
+	background-color: #00008B ;
+	color: #fff ;
+	border: 1px solid #00008B ;
+	cursor: pointer;
+}
+.btn-arrow.display-yes {
+	display: block;  
+}
+.btn-arrow.display-no {
+	display: none;  
+}
+span.btn-arrow {
+	padding-left: 10px;
+}
+.btn-arrow i.fa {
+	font-size: 22px;
+	font-family: FontAwesome;
+	margin-left: 10px;
+	font-weight: 600;
+	color: currentColor;
+}
+
+
+.btn-flat {
+  min-width: 44px;
+  min-height: 44px;
+  background: white;
+	background: linear-gradient(to bottom, #fff, #f0f0f0);
+  border: 1px solid rgb(0, 0, 0);
+  font-weight: 600;
+  border-radius: 0.25em;
+  bottom: 1em;
+  min-width: fit-content;
+  padding: 0.5em 1.5em;
+	border-color: transparent;
+	box-shadow: var(--overlay-ts);
+}
+@media screen and (orientation: portrait) {
+  .btn-flat {
+    bottom: 0.5em;
+ }
+}

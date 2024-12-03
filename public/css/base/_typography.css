@@ -1,0 +1,18 @@
+header nav {
+	font-family: var(--mainNav-ff);
+	font-size: var(--mainNav-fs);
+} 
+
+
+body{
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  font-family:var(--ff-body);
+  font-weight: var(--fw-body);
+}
+
+
+a:hover,
+a:focus{
+  text-decoration: underline;
+}

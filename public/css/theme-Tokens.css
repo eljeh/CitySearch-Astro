@@ -1,0 +1,286 @@
+:root {
+  /* Global colors */
+  --global-colors-primary-color: hsl(0, 0%, 37%);
+  --global-colors-secondary-color: hsl(235, 0%, 50%);
+  --global-colors-tertiary-color: hsl(0, 0%, 0%);
+
+  --global-colors-page-color: #fff;
+  --global-colors-page-body-font-color: #000000;
+  --global-colors-page-heading-font-color: #000000;
+
+  --global-colors-altPage-page-color: #fff;
+  --global-colors-altPage-body-font-color: #000000;
+  --global-colors-altPage-heading-font-color: #000000;
+
+  --global-colors-section-section-color: #fff;
+  --global-colors-section-body-font-color: #000000;
+  --global-colors-section-heading-font-color: #000000;
+
+  --global-colors-altSection-section-color: #fff;
+  --global-colors-altSection-body-font-color: #000000;
+  --global-colors-altSection-heading-font-color: #000000;
+
+  --global-colors-utility-success-color: #28a745;
+  --global-colors-utility-danger-color: #dc3545;
+  --global-colors-utility-warning-color: #d39e00;
+  --global-colors-utility-info-color: #117a8b;
+
+  /* Typography - Desktop */
+  --typography-desktop-baseText-font: 'Montserrat', sans-serif;
+  --typography-desktop-baseText-fallback: sans-serif;
+  --typography-desktop-baseText-size: 16px;
+  --typography-desktop-baseText-transform: none;
+  --typography-desktop-baseText-lineHeight: 1.2;
+  --typography-desktop-baseText-weight: 500;
+
+  --typography-desktop-pageHeading-font: 'Montserrat', sans-serif;
+  --typography-desktop-pageHeading-fallback: sans-serif;
+  --typography-desktop-pageHeading-size: 42px;
+  --typography-desktop-pageHeading-transform: capitalize;
+  --typography-desktop-pageHeading-lineHeight: 1.2;
+
+  --typography-desktop-sectionHeading-font: 'Montserrat', sans-serif;
+  --typography-desktop-sectionHeading-fallback: sans-serif;
+  --typography-desktop-sectionHeading-size: 30px;
+  --typography-desktop-sectionHeading-transform: capitalize;
+  --typography-desktop-sectionHeading-lineHeight: 1.2;
+
+  --typography-desktop-articleHeading-font: 'Montserrat', sans-serif;
+  --typography-desktop-articleHeading-fallback: sans-serif;
+  --typography-desktop-articleHeading-size: 24px;
+  --typography-desktop-articleHeading-transform: capitalize;
+  --typography-desktop-articleHeading-lineHeight: 1.2;
+
+  --typography-desktop-heading-font: 'Montserrat', sans-serif;
+  --typography-desktop-heading-fallback: sans-serif;
+  --typography-desktop-heading-size: 20px;
+  --typography-desktop-heading-transform: capitalize;
+  --typography-desktop-heading-lineHeight: 1.2;
+
+  /* Typography - Mobile */
+  --typography-mobile-baseText-font: 'Montserrat', sans-serif;
+  --typography-mobile-baseText-fallback: sans-serif;
+  --typography-mobile-baseText-size: 18px;
+  --typography-mobile-baseText-transform: none;
+  --typography-mobile-baseText-lineHeight: 1.2;
+
+  --typography-mobile-pageHeading-font: 'Montserrat', sans-serif;
+  --typography-mobile-pageHeading-fallback: sans-serif;
+  --typography-mobile-pageHeading-size: 42px;
+  --typography-mobile-pageHeading-transform: capitalize;
+  --typography-mobile-pageHeading-lineHeight: 1.2;
+
+  --typography-mobile-sectionHeading-font: 'Montserrat', sans-serif;
+  --typography-mobile-sectionHeading-fallback: sans-serif;
+  --typography-mobile-sectionHeading-size: 30px;
+  --typography-mobile-sectionHeading-transform: capitalize;
+  --typography-mobile-sectionHeading-lineHeight: 1.2;
+
+  --typography-mobile-articleHeading-font: 'Montserrat', sans-serif;
+  --typography-mobile-articleHeading-fallback: sans-serif;
+  --typography-mobile-articleHeading-size: 24px;
+  --typography-mobile-articleHeading-transform: capitalize;
+  --typography-mobile-articleHeading-lineHeight: 1.2;
+
+  --typography-mobile-heading-font: 'Montserrat', sans-serif;
+  --typography-mobile-heading-fallback: sans-serif;
+  --typography-mobile-heading-size: 20px;
+  --typography-mobile-heading-transform: capitalize;
+  --typography-mobile-heading-lineHeight: 1.2;
+
+  /* Forms */
+  --forms-background-color: #FFFFFF;
+  --forms-background-opacity: 1;
+
+  /* Forms Text */
+  --forms-text-fallback: sans-serif;
+  --forms-text-font: Montserrat;
+  --forms-text-font-set: GOOGLE;
+
+  /* Forms Label Font */
+  --forms-label-font-fallback: sans-serif;
+  --forms-label-font-font: Montserrat;
+  --forms-label-font-font-set: GOOGLE;
+
+  /* Forms Help Text */
+  --forms-help-text-fallback: sans-serif;
+  --forms-help-text-font: Montserrat;
+  --forms-help-text-font-set: GOOGLE;
+
+  /* Forms Border */
+  --forms-border-top-width: 2px;
+  --forms-border-top-opacity: 1;
+  --forms-border-top-style: solid;
+  --forms-border-top-color: #D1D6DC;
+
+  --forms-border-right-width: 2px;
+  --forms-border-right-opacity: 1;
+  --forms-border-right-style: solid;
+  --forms-border-right-color: #D1D6DC;
+
+  --forms-border-bottom-width: 2px;
+  --forms-border-bottom-opacity: 1;
+  --forms-border-bottom-style: solid;
+  --forms-border-bottom-color: #D1D6DC;
+
+  --forms-border-left-width: 2px;
+  --forms-border-left-opacity: 1;
+  --forms-border-left-style: solid;
+  --forms-border-left-color: #D1D6DC;
+
+  /* Forms Border Radius */
+  --forms-border-radius: 3px;
+
+  /* Forms Fields Placeholder */
+  --forms-fields-placeholder-fallback: sans-serif;
+  --forms-fields-placeholder-font: Montserrat;
+  --forms-fields-placeholder-font-set: GOOGLE;
+
+  /* Forms Fields Value */
+  --forms-fields-value-fallback: sans-serif;
+  --forms-fields-value-font: Montserrat;
+  --forms-fields-value-font-set: GOOGLE;
+
+  /* Forms Fields Background */
+  --forms-fields-background-color: #FFFFFF;
+  --forms-fields-background-opacity: 1;
+
+  /* Forms Fields Border */
+  --forms-fields-border-top-width: 2px;
+  --forms-fields-border-top-opacity: 1;
+  --forms-fields-border-top-style: solid;
+  --forms-fields-border-top-color: #D1D6DC;
+
+  --forms-fields-border-right-width: 2px;
+  --forms-fields-border-right-opacity: 1;
+  --forms-fields-border-right-style: solid;
+  --forms-fields-border-right-color: #D1D6DC;
+
+  --forms-fields-border-bottom-width: 2px;
+  --forms-fields-border-bottom-opacity: 1;
+  --forms-fields-border-bottom-style: solid;
+  --forms-fields-border-bottom-color: #D1D6DC;
+
+  --forms-fields-border-left-width: 2px;
+  --forms-fields-border-left-opacity: 1;
+  --forms-fields-border-left-style: solid;
+  --forms-fields-border-left-color: #D1D6DC;
+
+  /* Forms Fields Border Radius */
+  --forms-fields-border-radius: 0.25em;
+
+  /* Forms */
+  --forms-background-color: #FFFFFF;
+  --forms-background-opacity: 1;
+
+  /* Forms Text */
+  --forms-text-fallback: sans-serif;
+  --forms-text-font: Montserrat;
+  --forms-text-font-set: GOOGLE;
+
+  /* Forms Label Font */
+  --forms-label-font-fallback: sans-serif;
+  --forms-label-font-font: Montserrat;
+  --forms-label-font-font-set: GOOGLE;
+
+  /* Forms Help Text */
+  --forms-help-text-fallback: sans-serif;
+  --forms-help-text-font: Montserrat;
+  --forms-help-text-font-set: GOOGLE;
+
+  /* Forms Border */
+  --forms-border-top-width: 2px;
+  --forms-border-top-opacity: 1;
+  --forms-border-top-style: solid;
+  --forms-border-top-color: #D1D6DC;
+
+  --forms-border-right-width: 2px;
+  --forms-border-right-opacity: 1;
+  --forms-border-right-style: solid;
+  --forms-border-right-color: #D1D6DC;
+
+  --forms-border-bottom-width: 2px;
+  --forms-border-bottom-opacity: 1;
+  --forms-border-bottom-style: solid;
+  --forms-border-bottom-color: #D1D6DC;
+
+  --forms-border-left-width: 2px;
+  --forms-border-left-opacity: 1;
+  --forms-border-left-style: solid;
+  --forms-border-left-color: #D1D6DC;
+
+  /* Forms Border Radius */
+  --forms-border-radius: 3px;
+
+  /* Forms Fields Placeholder */
+  --forms-fields-placeholder-fallback: sans-serif;
+  --forms-fields-placeholder-font: Montserrat;
+  --forms-fields-placeholder-font-set: GOOGLE;
+
+  /* Forms Fields Value */
+  --forms-fields-value-fallback: sans-serif;
+  --forms-fields-value-font: Montserrat;
+  --forms-fields-value-font-set: GOOGLE;
+
+  /* Forms Fields Background */
+  --forms-fields-background-color: #FFFFFF;
+  --forms-fields-background-opacity: 1;
+
+  /* Forms Fields Border */
+  --forms-fields-border-top-width: 2px;
+  --forms-fields-border-top-opacity: 1;
+  --forms-fields-border-top-style: solid;
+  --forms-fields-border-top-color: #D1D6DC;
+
+  --forms-fields-border-right-width: 2px;
+  --forms-fields-border-right-opacity: 1;
+  --forms-fields-border-right-style: solid;
+  --forms-fields-border-right-color: #D1D6DC;
+
+  --forms-fields-border-bottom-width: 2px;
+  --forms-fields-border-bottom-opacity: 1;
+  --forms-fields-border-bottom-style: solid;
+  --forms-fields-border-bottom-color: #D1D6DC;
+
+  --forms-fields-border-left-width: 2px;
+  --forms-fields-border-left-opacity: 1;
+  --forms-fields-border-left-style: solid;
+  --forms-fields-border-left-color: #D1D6DC;
+
+  /* Forms Fields Border Radius */
+  --forms-fields-border-radius: 0.25em;
+
+  --spacing-vertical-spacing: 80px;
+  --spacing-maximum-content-width: 1240px;
+
+  /* Website Header */
+  --header-background-color: #000000;
+  --header-is-overlay: false;
+  --header-clickable-text-font: "Montserrat", sans-serif;
+  --header-clickable-text-size: 18px;
+  --header-clickable-text-color: #FFFFFF;
+  --header-clickable-text-styles: text-decoration: none;
+  --header-transform: capitalize;
+  --header-clickable-text-hover-color: #FFFFFF;
+  --header-height: 120px;
+  --header-spacing-padding-top: 20px;
+  --header-spacing-padding-right: 20px;
+  --header-spacing-padding-bottom: 20px;
+  --header-spacing-padding-left: 20px;
+
+  /* Footer */
+  --footer-background-color: #000;
+  --footer-heading-color: #fff;
+  --footer-text-color: #fff;
+  --footer-link-color: #fff;
+  --footer-hover-link-color: #eee;
+
+  /* Footer Bottom Bar */
+  --footer-bottom-bar-background-color: #000000;
+  --footer-bottom-bar-text-color: #FFFFFF;
+
+  --knockout-clr: hsl(0deg 0% 100%);
+  --overlay-bs: 0px 1px 10px 2px #00123469;
+  --overlay-ts: 0px 1px 6px #001234ad;
+
+}

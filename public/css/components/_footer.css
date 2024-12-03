@@ -1,0 +1,51 @@
+/* @import url('http://example.com/example_style.css'); */
+
+/***********************************************/
+/* CSS @imports must be at the top of the file */
+/* Add them above this section                 */
+/***********************************************/
+
+/*****************************************/
+/* Start your style declarations here    */
+/*****************************************/
+.footer-row-0-vertical-alignment > .row-fluid {
+  gap: 2vw;
+}
+
+footer {
+  background: black;
+  font-family: var(--ff-header);
+  color: white;
+}
+
+footer .footer{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3em 1.5em 0;
+}
+
+footer h5 {
+  text-transform: uppercase;
+}
+.footer ul{
+  padding: 0!important;
+}
+
+.footer ul li {
+  list-style: none!important;
+  word-wrap: break-word;
+  line-height: 1.2;
+  padding: 6px 0!important;
+}
+.footer ul li a {
+  font-size: 14px!important;
+  transition: all 0.3s ease 0s;
+  color: #FFFFFF!important;
+  text-decoration: none!important;
+}
+
+.footer a.social-links__link{
+  z-index: 1;
+}

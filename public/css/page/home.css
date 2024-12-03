@@ -1,0 +1,18 @@
+/* @import url('http://example.com/example_style.css'); */
+
+/***********************************************/
+/* CSS @imports must be at the top of the file */
+/* Add them above this section                 */
+/***********************************************/
+
+/*****************************************/
+/* Start your style declarations here    */
+/*****************************************/
+
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em 2em;
+    margin: 1em 0;
+}
