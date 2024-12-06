@@ -7,11 +7,32 @@ const { layout } = Astro.props;
 const page_layout = layout;
 ---
 
-<div class=`container ${page_layout}`>
+<div id='citySearch' data-layout={page_layout} class=`container`>
+  <div class='layoutControls'>
+    <label for='layout'>Layout</label>
+    <select name='layout' id='layout'>
+      <option value='fml'>Filter, Map, List</option>
+      <option value='lmf'>List, Map, Filter</option>
+      <option value='flm'>Filter, List, Map</option>
+      <option value='fl-ml'>Filter, List, Map</option>
+      <option value='l-mf'>List, Map, Filter</option>
+      <option value='f-ml'>Filter, Map, List</option>
+    </select>
+  </div>
   <SearchResults />
   <SearchFilter />
   <Map />
 </div>
+
+<script>
+  const layoutSelect = document.getElementById('layout');
+  layoutSelect.addEventListener('change', (event) => {
+    console.log('layout changed: ', event.target.value);
+    const layout = event.target.value;
+    const citySearch = document.querySelector('#citySearch');
+    citySearch.setAttribute('data-layout', layout);
+  });
+</script>
 
 <style is:inline>
   /*****************************************/
@@ -89,6 +110,7 @@ const page_layout = layout;
     --list-size: minmax(min-content, 51.5rem);
     --map-size: 1fr;
   }
+  .container[data-layout='fml'],
   .container.fml {
     grid-template-columns: 25vw 1fr 25vw;
     grid-template-columns: var(--filter-size) var(--map-size) var(--list-size);
@@ -98,6 +120,7 @@ const page_layout = layout;
       'filter map list'
       'filter map list';
   }
+  .container[data-layout='lmf'],
   .container.lmf {
     grid-template-columns: 25vw 1fr 25vw;
     grid-template-columns: var(--list-size) var(--map-size) var(--filter-size);
@@ -107,6 +130,7 @@ const page_layout = layout;
       'list map filter'
       'list map filter';
   }
+  .container[data-layout='flm'],
   .container.flm {
     grid-template-columns: 25vw 1fr 1fr;
     grid-template-columns: var(--filter-size) var(--list-size) var(--map-size);
@@ -116,6 +140,7 @@ const page_layout = layout;
       'filter list map'
       'filter list map';
   }
+  .container[data-layout='fl-ml'],
   .container.fl-ml {
     grid-template-columns: 1fr 1fr 25vw;
     grid-template-rows: 25vh 1fr 1fr;
@@ -160,7 +185,7 @@ const page_layout = layout;
   div#map {
     height: 100%;
   }
-
+  .container[data-layout='f-ml'],
   .container.f-ml {
     grid-template-columns: 25vw 50vw 25vw;
     grid-template-rows: 25vh 50vh 25vh;
@@ -193,5 +218,14 @@ const page_layout = layout;
   }
   div#map {
     padding: 0;
+  }
+  .layoutControls {
+    position: absolute;
+    z-index: 1000;
+    top: 1em;
+    right: 1em;
+    background: white;
+    padding: 0.5em;
+    border-radius: 0.5em;
   }
 </style>
